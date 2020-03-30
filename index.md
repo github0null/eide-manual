@@ -1,7 +1,9 @@
 [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide): A Keil C51/STM32 **project migration tool** and **IDE** with multiple toolchains. Provide development, compilation, burning, management functions for **8051**, **stm32** projects on vscode. Keil 5 version is mainly supported.
 
 ***
-@[toc]
+
+[toc]
+
 ***
 
 ## last update time: 2020/3/29 11:55
@@ -13,13 +15,13 @@
 ***
 ## Project directory basic structure
 ![directory structure](https://img-blog.csdnimg.cn/20200130134904722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-- `.EIDE` 项目文件的目录和 EIDE 日志存放的位置
-- `dependence` 项目 Keil 包依赖的存放位置, 其中内容由 EIDE 自动添加、创建、管理，通过使用[添加依赖](#从包中添加添加要使用的依赖项)完成添加
-- `out` EIDE 默认的输出目录, 编译产生的文件存放在此处
-- `pack` ARM 包的安装位置, 用户无需更改此文件夹下的内容
-- `src` 源文件的目录, 可以自由选择[添加新的源文件目录到搜索列表中](#添加新的源文件目录到搜索列表中)
+- `.EIDE` Directory of project files and EIDE log location
+- `dependence` Dependencies of project, where the content is automatically added, created, and managed by EIDE, and added by using [add-dependencies](# 从包中添加依赖项)
+- `out` Default output directory, where the compiled files are stored
+- `pack` ARM package installation location, the user does not need to change the contents of this folder
+- `src` Directory of source files. You can add new directories to it by [add-source-dir](#添加新的源文件目录到搜索列表中)
 
-> 其他未列出的目录不在 EIDE 的管理范围之内，也不由 EIDE 创建，由开发者自行管理
+> Other unlisted directories are not managed by EIDE, are not created by EIDE, and are managed by the developer
 
 ## 开始
 在开始你的项目之前，需要设置正确的 keil TOOLS.INI文件的路径， 否则**编译功能**将无法正常工作，因为插件需要使用 keil 自带的编译工具
