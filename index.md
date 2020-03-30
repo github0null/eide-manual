@@ -23,7 +23,8 @@
 
 > Other unlisted directories are not managed by EIDE, are not created by EIDE, and are managed by the developer
 
-## 开始
+## Start
+
 在开始你的项目之前，需要设置正确的 keil TOOLS.INI文件的路径， 否则**编译功能**将无法正常工作，因为插件需要使用 keil 自带的编译工具
 
 **对于非 Keil 的工具链，设置工具链路径请前往 插件设置**
