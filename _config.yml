@@ -1,2 +1,5 @@
 theme: jekyll-theme-cayman
 title: EIDE Manual
+description: EIDE Manual
+keyword: 'keil,c51,stm32,sdcc,arm gcc,ide'
+url: 'https://marketplace.visualstudio.com/items?itemName=CL.eide'
