@@ -2,7 +2,7 @@
 
 ***
 
-[toc]
+[TOC]
 
 ***
 
@@ -25,51 +25,53 @@
 
 ## Start
 
-在开始你的项目之前，需要设置正确的 keil TOOLS.INI文件的路径， 否则**编译功能**将无法正常工作，因为插件需要使用 keil 自带的编译工具
+Before start your project, you need to set path of the keil's **TOOLS.INI** file, otherwise the **Compilation** function will not work properly because the plug-in needs to use keil's compilation tool
 
-**对于非 Keil 的工具链，设置工具链路径请前往 插件设置**
+**For non-keil toolchains, go to plug-in Settings to set the toolchain path**
 
-**两个路径按需求设置，如果你只需要开发 Keil_C51，那么 ARM 路径可以选择忽略；反之亦然**
+**The two paths are set as required. If you only need to develop 8051, then the ARM path can be ignored. And vice versa**
 
-- ### Keil 路径设置
-	`绿色`✅：路径已完全设置完毕
-	`橙色感叹号`⚠：C51 和 ARM 路径中**有一个**无效，此时点击`设置 Keil 路径`，C51 和 ARM 选项后面有一个描述：**Verified** 表示已验证的，**Invalid** 表示无效的，此描述表示了路径设置的状态，见下图
-	![在这里插入图片描述](https://img-blog.csdnimg.cn/20200218114627748.png)
-	`红色叉叉`❌：两个路径**都**为无效
+- ### Keil path settings
+	`Green`✅: All path ok !
+	`Orange exclamation point`⚠: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
+	![setting show](https://img-blog.csdnimg.cn/20200218114627748.png)
+	`red`❌：All of paths are invalid
 	
 ***
 
-- ### 打开项目
+- ### Open project
 
-打开项目：可以使用操作菜单里的 **打开项目** 选项，也可以直接使用 vscode 打开**工作区文件**，建议使用**后者**；
+Open project: You can not only open a project by the **Open project** menu option, but also open **workspace file** directly by vscode. I suggest using to use **the latter**
 
 ***
 	
-- ### 创建和导入项目
+- ### Create and import project
 
-- #### 手动创建
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200222121836922.gif)
+- #### Manually create
+![create](https://img-blog.csdnimg.cn/20200222121836922.gif)
 
-- #### 从 Keil 5 导入
+- #### Import from Keil 5
 
-**注意：** 带有 `.uvproj` 后缀的**必须是** C51 项目，带有 `.uvprojx` 后缀的**必须是** Keil MDK 项目
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200222122221758.gif)
-其中 **storageLayout** 为 RAM/ROM 布局，如果你选择了 **useCustomScatterFile**（即使用自定义的 ARM sct 文件），这个选项将被忽略
+**Attention:** Files with **".uvproj"** suffix must be C51 project. Files with **".uvprojx"** suffix must be Keil MDK project
+![import](https://img-blog.csdnimg.cn/20200222122221758.gif)
 
+The **storageLayout** is RAM/ROM layout. if you choose **useCustomScatterFile**(use custom ARM/GCC linker file)，the option **storageLayout** will be ignore.
 
-- #### 使用模板完成创建 
-	> 创建一个项目是一个繁琐的过程，尤其是STM32的项目，你也许会在为各种文件夹的复制粘贴而苦恼。
-	而有了模板功能，我们可以快速搭建项目的主体框架，除去那些繁琐而无意义的过程。
-	插件提供的有两种选择模板的方式：从 **本地磁盘** 或 **Github 远程仓库**。
-	对于 Github 方式，用户可以自由设置自己的模板仓库位置，仓库必须是公开的，插件无法访问私有的仓库
-	默认的仓库位置是 [eide-doc](https://github.com/github0null/eide-doc), 作者在仓库里存放了一些简单的项目模板，以后也会不断进行添加
-    ![示例](https://img-blog.csdnimg.cn/2020020817433511.gif)
+- #### Create by projetct template
+	> Creating a project is a tedious process, especially with STM32, and you may feel boring with copying and pasting folders.
+	With the template function, we can quickly build the main framework of the project, remove those tedious and meaningless process.
+	There are two ways to choose a template: **from disk** or **from Github remote repository**.
+	for Github way, Users can set their own template repository location, repository must be public, beacause plug-in can't access to private repository
+	default repository location [eide-doc](https://github.com/github0null/eide-doc), The author keeps some simple project templates in the repository, The author will continue to add.
+    ![import from template](https://img-blog.csdnimg.cn/2020020817433511.gif)
 
 ***
-## 安装 Keil 包组件
-> 如果不想手动复制芯片的HAL库；可以通过安装 Keil 包，再安装相应外设组件完成，已安装的组件会在 `dependence` 目录中出现，内容包括此组件的需要的源文件，头文件等，这些组件都会被自动加入到编译流程
+## Install Keil package
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022212243396.gif)
+> If you don't want to manually copy the chip's HAL library; You can do this by installing the Keil package and then installing the peripheral components. The installed components will appear in the "dependence" directory, the content includes the required source files, header files, and so on, which are automatically added to the compilation process
+
+![install keil package](https://img-blog.csdnimg.cn/2020022212243396.gif)
+
 ***
 
 ## 编译项目

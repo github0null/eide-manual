@@ -5,9 +5,6 @@ description: A manual for vscode eide plug-in
 keyword: 'keil,c51,stm32,sdcc,arm gcc,ide'
 url: 'https://marketplace.visualstudio.com/items?itemName=CL.eide'
 
-markdown: kramdown
-toc_levels: 1..2
-
 # footer
 footer:
   since: 2020
