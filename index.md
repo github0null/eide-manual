@@ -1,17 +1,18 @@
-[EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide)： 一个 Keil 项目**迁移工具**和**IDE**, 提供在 vscode 上对 `C51`, `STM32` 项目进行 开发, 编译, 烧录, 调试, 管理的功能。 主要支持 Keil 5 版本
+[EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide): A Keil C51/STM32 **project migration tool** and **IDE** with multiple toolchains. Provide development, compilation, burning, management functions for **8051**, **stm32** projects on vscode. Keil 5 version is mainly supported.
 
 ***
-@[toc] 
- ***
+@[toc]
+***
 
-## 更新时间：2020/3/29 11:55
- ***
-## 每次更新后注意查看插件的 CHANGE.LOG 以得知版本变化
+## last update time: 2020/3/29 11:55
+***
+
+## Be sure to check the plug-in's CHANGE.LOG after each update for version changes
 ### [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog)
 
- ***
-## 目录基本结构
-![目录结构](https://img-blog.csdnimg.cn/20200130134904722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+***
+## Project directory basic structure
+![directory structure](https://img-blog.csdnimg.cn/20200130134904722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 - `.EIDE` 项目文件的目录和 EIDE 日志存放的位置
 - `dependence` 项目 Keil 包依赖的存放位置, 其中内容由 EIDE 自动添加、创建、管理，通过使用[添加依赖](#从包中添加添加要使用的依赖项)完成添加
 - `out` EIDE 默认的输出目录, 编译产生的文件存放在此处
@@ -28,7 +29,7 @@
 **两个路径按需求设置，如果你只需要开发 Keil_C51，那么 ARM 路径可以选择忽略；反之亦然**
 
 - ### Keil 路径设置
-	`绿色`✔：路径已完全设置完毕
+	`绿色`✅：路径已完全设置完毕
 	`橙色感叹号`⚠：C51 和 ARM 路径中**有一个**无效，此时点击`设置 Keil 路径`，C51 和 ARM 选项后面有一个描述：**Verified** 表示已验证的，**Invalid** 表示无效的，此描述表示了路径设置的状态，见下图
 	![在这里插入图片描述](https://img-blog.csdnimg.cn/20200218114627748.png)
 	`红色叉叉`❌：两个路径**都**为无效
@@ -37,7 +38,7 @@
 
 - ### 打开项目
 
-	打开项目：可以使用操作菜单里的 **打开项目** 选项，也可以直接使用 vscode 打开**工作区文件**，建议使用**后者**；
+打开项目：可以使用操作菜单里的 **打开项目** 选项，也可以直接使用 vscode 打开**工作区文件**，建议使用**后者**；
 
 ***
 	
@@ -59,10 +60,11 @@
 	插件提供的有两种选择模板的方式：从 **本地磁盘** 或 **Github 远程仓库**。
 	对于 Github 方式，用户可以自由设置自己的模板仓库位置，仓库必须是公开的，插件无法访问私有的仓库
 	默认的仓库位置是 [eide-doc](https://github.com/github0null/eide-doc), 作者在仓库里存放了一些简单的项目模板，以后也会不断进行添加
-![示例](https://img-blog.csdnimg.cn/2020020817433511.gif)
+    ![示例](https://img-blog.csdnimg.cn/2020020817433511.gif)
+
 ***
 ## 安装 Keil 包组件
->如果不想手动复制芯片的HAL库；可以通过安装 Keil 包，再安装相应外设组件完成，已安装的组件会在 `dependence` 目录中出现，内容包括此组件的需要的源文件，头文件等，这些组件都会被自动加入到编译流程
+> 如果不想手动复制芯片的HAL库；可以通过安装 Keil 包，再安装相应外设组件完成，已安装的组件会在 `dependence` 目录中出现，内容包括此组件的需要的源文件，头文件等，这些组件都会被自动加入到编译流程
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022212243396.gif)
 ***
@@ -83,15 +85,16 @@
 #### 路径变量
 在**编译配置**->**afterBuildTasks、beforeBuildTasks** 中可用的 **路径变量**, 变量名不区分大小写
 
-> 变量名：\${targetName}，含义：输出 hex 的文件名称；
-> 变量名：\${exeDir}，含义：构建工具所在目录；
-> 变量名：\${binDir}，含义： 工具链根目录；
-> 变量名：\${OutDir}，含义：项目输出目录；
-> 变量名：\${CompileToolDir}，含义：编译工具所在目录；
+> 变量名：${targetName}，含义：输出 hex 的文件名称
+> 变量名：${exeDir}，含义：构建工具所在目录；
+> 变量名：${binDir}，含义： 工具链根目录；
+> 变量名：${OutDir}，含义：项目输出目录；
+> 变量名：${CompileToolDir}，含义：编译工具所在目录；
 > .
 > 命令示例：del "${OutDir}\\*.o"，含义：删除输出目录下所有的 .o 文件
 > ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200314130436141.png)
 ***
+
 #### C51/SDCC
 **v1.7.0** 以后，8051 类的编译配置也转移至 json 配置，带有悬停和补全
 
