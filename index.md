@@ -32,6 +32,7 @@ Before start your project, you need to set path of the keil's **TOOLS.INI** file
 	- `Orange exclamation point`❗: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
 	![setting show](./res/set_path.png)
 	- `red`❌：All of paths are invalid
+
 ***
 
 ## Operations 📌
