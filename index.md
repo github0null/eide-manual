@@ -14,7 +14,7 @@
 
 ***
 ## Project directory basic structure
-![directory structure](https://img-blog.csdnimg.cn/20200130134904722.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+![directory structure](./res/dir_struct.png)
 - `.EIDE` Directory of project files and EIDE log location
 - `dependence` Dependencies of project, where the content is automatically added, created, and managed by EIDE, and added by using [add-dependencies](# 从包中添加依赖项)
 - `out` Default output directory, where the compiled files are stored
@@ -32,10 +32,10 @@ Before start your project, you need to set path of the keil's **TOOLS.INI** file
 **The two paths are set as required. If you only need to develop 8051, then the ARM path can be ignored. And vice versa**
 
 - ### Keil path settings
-	`Green`✅: All path ok !
-	`Orange exclamation point`⚠: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
+	- `Green`✅: All path ok !
+	- `Orange exclamation point`⚠: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
 	![setting show](https://img-blog.csdnimg.cn/20200218114627748.png)
-	`red`❌：All of paths are invalid
+	- `red`❌：All of paths are invalid
 	
 ***
 
@@ -74,60 +74,72 @@ The **storageLayout** is RAM/ROM layout. if you choose **useCustomScatterFile**(
 
 ***
 
-## 编译项目
-### 工具链说明 （对于非 Keil 的工具链，设置工具链路径请前往 插件设置）
+## Compile project
+
+### Toolchain description (For non-keil toolchains, go to plug-in Settings to set the toolchain path)
+
 #### 8051
-**支持的工具链**：Keil_C51、SDCC
 
-**注意**：插件使用的 Keil_C51 **链接器**和**汇编器**为 **LX51** 和 **AX51**，而不是 **BL51**和**A51**
+**Supported toolchain**: Keil_C51, SDCC
+
+**Attention**: The Keil_C51 linker and assembler used by the plug-in are **LX51** and **AX51**, not **BL51** and **A51**
 
 ***
+
 #### ARM
-**支持的工具链**：ARMCC V5、ARMCC V6
+
+**Supported toolchain**：ARMCC V5, ARMCC V6, GCC for ARM
 
 ***
-### 编译配置
-#### 路径变量
-在**编译配置**->**afterBuildTasks、beforeBuildTasks** 中可用的 **路径变量**, 变量名不区分大小写
 
-> 变量名：${targetName}，含义：输出 hex 的文件名称
-> 变量名：${exeDir}，含义：构建工具所在目录；
-> 变量名：${binDir}，含义： 工具链根目录；
-> 变量名：${OutDir}，含义：项目输出目录；
-> 变量名：${CompileToolDir}，含义：编译工具所在目录；
+### Compile configuration
+
+#### Path variable
+
+The available path variables in afterBuildTasks, beforeBuildTasks, with case-insensitive variable names
+
+> variables name: ${targetName}, 		meaning: Output the file name for hex
+> variables name: ${exeDir}, 			meaning: Directory where the build tool resides
+> variables name: ${binDir}, 			meaning: Tool chain root directory
+> variables name: ${OutDir}, 			meaning: Project output directory
+> variables name: ${CompileToolDir}, 	meaning: Directory where the compiler is located
+> variables name: ${toolPrefix}, 		meaning: Toolchain prefix for GCC, like: "arm-none-eabi-"
 > .
-> 命令示例：del "${OutDir}\\*.o"，含义：删除输出目录下所有的 .o 文件
+> example: del "${OutDir}\\*.o", 		meaning: Delete all .o files in the output directory
 > ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200314130436141.png)
+
 ***
 
 #### C51/SDCC
-**v1.7.0** 以后，8051 类的编译配置也转移至 json 配置，带有悬停和补全
 
-对于 **SDCC** 的配置，见下图：
-1. 其中带有 **<>** 的选项，被 **<>** 包含的内容应该 **被替换为某个确定的值** ，见下图，如何取值见 **SDCC** 的手册
-2. 当你成功替换了 **<>** 中的值，json验证器会产生警告，不用理会它，如下图
-3. 悬停提示带有 **[]** 的选项，被 **[]** 包含的内容代表着此选项适用的 **设备** ，如下图
+For **SDCC** configurations, as shown in the figure below
+
+1. Where there is an option with **<>**, the content contained by **<>** should be replaced with **a certain value**, as shown in the figure below
+2. When you successfully replace the value in <>, the json validator will generate a warning and you should ignore it, as shown below
+3. Hover of option with **[]**, and the content contained by **[]** represents **the device for which this option applies**, as shown below
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020032621351451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-***
-#### ARM
-**v1.5.0** 以后，ARM 编译选项转移到 .EIDE 目录的 json 文件中，**旧版本（v1.4.0及以前）的编译配置将会失效** 如下图**划线的**；
 
-**这些失效的配置将会在项目关闭时被清理，以后打开该项目时将不会出现。**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200316133632852.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-打开**编译配置**：点击下图 **options** 按钮打开对应的配置
+***
+
+#### ARM
+
+Open**Compile Configuration**: Click **options** button to open configuration
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200314125025896.png)
-**编译配置** 带有 **悬停提示** 和 **自动补全**
+
+**Compile Configuration**:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200316134804816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-**切换工具链**：可在 **AC5** 和 **AC6** 之间切换
+**Switch toolchain**:
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200315135116101.png)
 ***
 
-### 开始编译
-快捷键：
- - **编译**：F6；
- - **快速编译**：F9；说明：只编译更改过的源文件
+### Start compile
+
+shortcut key:
+
+ - **Build**: F6
+ - **Fast Build**: F9, description: Only the source files that have changed are compiled
 
 ***
 
@@ -137,130 +149,146 @@ The **storageLayout** is RAM/ROM layout. if you choose **useCustomScatterFile**(
 
 #### ARM
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200314131533560.gif)
-##### 多线程编译模式（v1.6.0+）
-**如果开启了多线程模式(默认开启)且编译的文件数 >= 16 时， 就会使用多线程模式完成编译，主要用于提高编译的速度；**
-       
-**下图是一些对比，`编译用时` 是经过多次编译后取的稳定值**
 
-`开启前`
+##### 多线程编译模式（v1.6.0+）
+
+**If multithreaded mode is turned on (by default) and the number of files compiled is >= 16, the compilation is done using multithreaded mode, mainly to speed up the compilation**
+       
+**Here are some comparisons. 'compile time' is a stable value after multiple compilations**
+
+`Disable multithreaded`
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200319163612978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-`开启后`
+`Enable multithreaded`
 ![开启后](https://img-blog.csdnimg.cn/20200319163024916.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-`keil 开启后`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020031916304464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-***
-## 下载到目标芯片
-### C51（仅支持 STC），[stcgal 工具](https://github.com/grigorig/stcgal)
-> 此工具需要 **Python3** 支持
-> 在**开始**之前，需要安装 stcgal 工具
-> 使用命令：**pip3 install stcgal --user** 完成安装
 
-- STC 51 的下载配置较多，将在配置文件里进行，可以点击下图按钮打开配置（没有配置会在**EIDE**目录里创建一个新的配置文件）
-**如果忽略此步骤，将使用默认配置**，默认配置见 [stcgal usage](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md)
+`keil Enable multithreaded`
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020031916304464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+***
+
+## Download to device board
+
+### C51 (only supported for STC, [stcgal tools](https://github.com/grigorig/stcgal))
+
+> This tool requires **Python3** support
+> Before start, you need to install the stcgal tool
+> Install command: **pip3 install stcgal --user**
+
+- There are a lot of downloaded configuration of STC 51, which will be carried out in the configuration file. You can click the button below to open the configuration (if there is no configuration, a new configuration file will be created in the EIDE directory).
+
+**If you ignore this step, the default configuration is used**, The default configuration is [stcgal usage](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200303140346649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-配置文件的配置描述翻译自 [stcgal usage](https://github.com/grigorig/stcgal/blob/master/doc/USAGE.md)，带有悬停提示和自动补全
-**"[]" 号**里描述了适用于此配置的芯片型号，例如：**[ALL]** 表示适用于所有型号
+
+"[]" describes the type of chip suitable for this configuration, for example: "[ALL]" means suitable for ALL types
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200303140748914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-- **开始烧录**；
-	[stcgal 工具](https://github.com/grigorig/stcgal)用法与 STC 官方的烧录工具一样，**在面板输出 Cycling power done 之后**，需要**复位 stc 芯片**，这样才能检测到 ISP 命令，进入到下载流程；
-	如果配置没有问题，下载完成之后将会退出连接，配置有错误会失败并提示，请注意阅读失败后的**提示信息**；
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2020030314175653.gif)
-###  ARM
-**v1.8.0+** 以及之后的版本**将不会附带内置的 JLink 烧录工具**，**请到插件选项中设置 JLink 安装路径**
+**Start download**:
 
-**在下载之前必须配置好芯片型号等设置**
+[stcgal tool](https://github.com/grigorig/stcgal) usage is the same as STC's official recording tool，**After the panel outputs "Cycling power done"**，You need to reset the STC chip so that you can detect the ISP command and enter the download process.
+
+If there is no problem with the configuration, the connection will exit after the download is completed. If there is an error in the configuration, it will fail and prompt. Please pay attention to the **prompt message** after the failure.
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020030314175653.gif)
+
+###  ARM
+
+**v1.8.0** and later versions **will not come with the built-in JLink flash tool**, **please go to the plug-in options to set the JLink installation path**
+
+**You must configure the chip type and other Settings before downloading**
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200222122825416.gif)
 ***
 
-## 导出项目
-### 导出 Keil 工程
+## Export project
+
+### Export as a Keil project
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200222124535137.gif)
-### 导出 eide 模板
-> 在项目视图中点击导出模板，即可将此工程打包压缩，方便重复创建，如果你想与大家分享你的模板，可以使用 pull request 提交到默认的仓库[eide-doc](https://github.com/github0null/eide-doc)
 
-**压缩工程需要耗费一定时间，完成导出后会弹出提示**
+### Export as a project template
+> If you want to share your template with others, you can use pull-request to submit it to the default repository [eide-doc](https://github.com/github0null/eide-doc)
+
+**The compression project will take some time, and the prompt will pop up after the export**
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200223123507326.png)
-`默认的排除目录，导出的模板中将不会含有这些目录`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200319161607901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-***
-## 串口监视器
-> 在使用串口监视器前，必须设置好串口配置，见插件设置；
-> 默认配置：`波特率`：9600, `位宽度`：8, `奇偶校验`：无, `停止位`：1，`模式`：Receive Mode(仅接收)
 
-### 监视器模式
+**The default exclude directory, which will not be included in the exported template**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200319161607901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+***
+
+## Serialport Monitor
+
+> Before using the serial port monitor, you must set up the serial port configuration in plug-in settings.
+> Default setting: `Baud rate`：9600, `bit width`：8, `Parity`：无, `stop bit`：1，`mode`：Receive Mode(only receive)
+
+### Monitor mode
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200222134927566.png)
-#### Receive Mode（接收模式，只接收，适用于日志打印）
+
+#### Receive Mode (receive mode, receive only, for log printing)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022214042578.gif)
 
-#### Send and Receive Mode（双向模式，可收发，适用于调试串口）
-`下图为调试 WIFI模块 ESP-01S 的示例`
+#### Send and Receive Mode (two-way mode, transceiver, suitable for debugging serial port)
+`The following figure is an example of debugging WIFI module ESP-01S`
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200319161753567.gif)
 ***
 
-## 常用选项
-### 从包中添加添加要使用的依赖项
-- dependence 目录用于存放已添加的依赖项；依赖项包含的内容是与此外设相关的头文件，源文件，asm 文件，被添加的依赖项都会被加入到编译过程中
+## General Options
+
+### Add dependencies from keil package
+- 'dependence' directory is used to hold the added dependencies;Dependencies contain header files, source files, and asm files related to peripherals, All added dependencies are added to the compilation process
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200130143132377.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 ***
-### 添加新的源文件目录到搜索列表中
-- 被添加的目录的所有子目录也会被自动添加进入搜索目录，因此不必再为其子目录单独进行添加操作
+### add a source dir
+- All subdirectories of the added directory are also automatically added to the search directory, so there is no need to add subdirectories separately
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200130142239901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 ***
-### 将一个源文件目录从搜索列表移除, 操作不会从磁盘删除该目录
+
+### Removes a source directory from the search list. The operation does not remove the directory from disk
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200130142307314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 ****
-### 添加头文件目录
+
+### Add include directories
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200229225858257.png)
 
 ***
 
-### 添加预编译的宏
+### Add a precompiled macro
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200130142323314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 ***
-## 注意事项和常见问题
-### 注意事项
+
+## Attentions and FAQ
+
+### Attention
+
 #### SDCC
-##### 工具链路径
-SDCC 工具链路径需要在**插件选项中进行设置**
 
-***
-##### 编译选项
-SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函数的源文件生成的**，因此**必须要设置包含 main 函数的源文件名**，
-**默认是 main**（即 main() 函数位于 main.c 中），如下图
+##### Compiler Options
+
+When SDCC starts the link, **the first .rel file to be linked must be generated from the source file with the main() function**, so you must set the source file name with the main() function
+
+**default name is main** (The main() function is in main.c)，as shown in the figure below
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200327163530845.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+***
 
-***
-#### 快速编译
-只编译被修改过的文件，这意味着如果仅更改了宏定义列表中的某些全局的宏开关，你必须重新进行完全编译，如果仍然进行快速编译，那么被这些宏所影响的文件**不会参加编译**，最终将不会产生预期的结果。
-***
-#### 语法提示
-插件**不提供**语法提示等功能，这些功能由 C/C++ 插件提供， C51/STM32 有很多标准 c/c++ 里没有的关键字，会导致 C/C++ 插件产生语法错误，你需要关闭 C/C++ 插件的错误提示。只需要保留智能提示就行。 如果你打开了工作区，插件会自动帮你关掉错误提示。**如下图，__forceinline 是 ARM 特殊的关键字，在这里会导致语法错误，因此对于 STM32/C51，C/C++插件的语法提示是没有意义的，你应该关掉它**
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325113213777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-**如何关闭C/C++插件的错误提示**： 打开工作区文件，添加此项，或者直接在设置中更改
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200325114206935.png)
-***
-### SDCC常见问题
-#### 问题：无法加载项目
-**确保设置了正确的工具链路径**
+#### Fast build
 
+Compile only the files that have been modified, which means that if you change only some global macro switches in the macro definition list, you must recompile completely. If you still compile quickly, the files affected by these macros **will not participate in the compilation** and will not produce the desired results.
 ***
-### C51 常见问题
-#### 问题：烧录无法打开串口
-这很有可能是其他程序占用了串口，引发了冲突；`解决办法`：关闭占用串口的程序重试
+
+### C51 FAQ
+#### QUESTIONS: Can not open the serialport
+It is possible that other programs occupied the serial port, causing conflicts; `Answer` : close the program occupying the serial port to retry
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20200303143110142.png)
 ***
-### STM32 常见问题
-#### 问题：无法找到 "core_cm[x].h" 头文件
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200212161254490.png)
-`解决方法`：移动到 项目视图面板->项目依赖项，点击 `修复依赖`
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20200226000152776.png)
+
+### STM32 FAQ
+
+none
 
 ***
-## 小技巧
-### 将 hex 转换为 bin，ARM 项目已自动添加
-在编译选项 ->**afterBuildTasks** 中添加下图所示命令
+
+## tips
+
+### Hex to bin, the ARM project has been added automatically
+Add command to **Compile options**->**afterBuildTasks**
 
 ```json
 {
