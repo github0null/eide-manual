@@ -1,5 +1,5 @@
 
-## last update time: 2020/3/31 19:04
+## last update time 🕖 : 2020/3/31 19:04
 
 ***
 ### [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide)
@@ -19,7 +19,7 @@ A Keil C51/STM32 **project migration tool** and **IDE** with multiple toolchains
 
 > Other unlisted directories are not managed by EIDE, are not created by EIDE, and are managed by the developer
 
-## Start
+## Start 🏃‍♀️
 
 Before start your project, you need to set path of the keil's **TOOLS.INI** file, otherwise the **Compilation** function will not work properly because the plug-in needs to use keil's compilation tool
 
@@ -29,12 +29,12 @@ Before start your project, you need to set path of the keil's **TOOLS.INI** file
 
 - ### Keil path settings
 	- `Green`✅: All path ok !
-	- `Orange exclamation point`⚠: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
+	- `Orange exclamation point`❗: One of paths is invalid, click 'Set Keil path', there is a description behind of option: **Verified** or **Invalid**. This description represents the state of the path Settings, as shown in the figure below
 	![setting show](./res/set_path.png)
 	- `red`❌：All of paths are invalid
 ***
 
-## Operations
+## Operations 📌
 
 ![preview](./res/operations.png)
 
@@ -73,7 +73,7 @@ Default repository location [eide-doc](https://github.com/github0null/eide-doc),
 
 
 ***
-## Install Keil package
+## Install Keil package 📦
 
 > If you don't want to manually copy the chip's HAL library; You can do this by installing the Keil package and then installing the peripheral components. The installed components will appear in the "dependence" directory, the content includes the required source files, header files, and so on, which are automatically added to the compilation process
 
@@ -246,7 +246,7 @@ If there is no problem with the configuration, the connection will exit after th
 
 ***
 
-## Serialport Monitor
+## Serialport Monitor 🔌
 
 > Before using the serial port monitor, you must set up the serial port configuration in plug-in settings.
 > Default setting: `Baud rate`：9600, `bit width`：8, `Parity`：无, `stop bit`：1，`mode`：Receive Mode(only receive)
@@ -267,7 +267,7 @@ If there is no problem with the configuration, the connection will exit after th
 
 ***
 
-## General Options
+## General Options 🚀
 
 ### Add dependencies from keil package
 - 'dependence' directory is used to hold the added dependencies;Dependencies contain header files, source files, and asm files related to peripherals, All added dependencies are added to the compilation process
@@ -301,7 +301,7 @@ If there is no problem with the configuration, the connection will exit after th
 
 ***
 
-## Attentions and FAQ
+## Attentions and FAQ 🚩
 
 ### Attention
 
@@ -337,7 +337,7 @@ none
 
 ***
 
-## tips
+## tips 💡
 
 ### 1. Hex to bin, the ARM project has been added automatically
 
