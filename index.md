@@ -1,5 +1,5 @@
 
-## last update time 🕖 : 2020/3/31 19:04
+## last update time 🕐 : 2020/4/1 13:39
 
 ***
 ### [EIDE](https://marketplace.visualstudio.com/items?itemName=CL.eide)
@@ -54,6 +54,8 @@ Create a empty eide project
 ### 3. Import from Keil 5
 
 **Attention:** Files with **".uvproj"** suffix must be C51 project. Files with **".uvprojx"** suffix must be Keil MDK project
+
+**The source files in the Keil project structure are copied to the directory of the eide project，The header search path is inherited from Keil**
 
 The **storageLayout** is RAM/ROM layout. if you choose **useCustomScatterFile**(use custom ARM/GCC linker file)，the option **storageLayout** will be ignore.
 
@@ -305,6 +307,8 @@ If there is no problem with the configuration, the connection will exit after th
 ## Attentions and FAQ 🚩
 
 ### Attention
+
+- Import Keil Project: **The source files in the Keil project structure are copied to the directory of the eide project，The header search path is inherited from Keil**
 
 #### SDCC
 
