@@ -366,7 +366,3 @@ Add command to **Compile options**->**afterBuildTasks**
 ```
 
 ***
-
-<script src="http://jerry-cdn.b0.upaiyun.com/hit-kounter/hit-kounter-0.1.1.js"></script>
-
-<span data-hk-page="current"> - </span>
