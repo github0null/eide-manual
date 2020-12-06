@@ -10,11 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 
-  <!-- Gitalk -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-
   <!-- theme -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
   <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script> -->
@@ -37,15 +32,20 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 
   <!-- Gitalk -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
     const gitalk = new Gitalk({
-      clientID: 'Github Application Client ID',
-      clientSecret: 'Github Application Client Secret',
-      repo: 'https://github.com/github0null/eide',
+      clientID: 'bb4cd8b3e260d4e467a7',
+      clientSecret: 'f0411851ae3c1ec12e4624d8e53f9fc769fae339',
+      repo: 'https://github.com/github0null/eide-manual',
       owner: 'github0null',
       admin: ['github0null'],
+      id: 'eide-gitalk-issue',
       distractionFreeMode: false
-    })
+    });
+    gitalk.render('gitalk-container');
   </script>
 </body>
 
