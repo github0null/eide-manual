@@ -505,6 +505,7 @@ STVP 工具配置界面如图
 ![](https://img-blog.csdnimg.cn/20200612021943618.png)
 
 ***
+
 ## 注意事项和常见问题 🚩
 ### 注意事项
 #### SDCC
@@ -549,3 +550,7 @@ SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函
 ![](https://img-blog.csdnimg.cn/20200506211039857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
 ***
+
+## 评论
+
+> 将问题反馈到 [EIDE Issue](https://github.com/github0null/eide/issues) 或者 直接在下方留言
