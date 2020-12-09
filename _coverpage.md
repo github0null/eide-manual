@@ -4,7 +4,7 @@
 
 <font size=3.5> 关于 Embedded IDE 的一个简单的使用手册 </font>
 
-- <span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_uv"></span> 人来过</span>
+- <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span> 人来过</span>
 
 [![version](https://vsmarketplacebadge.apphb.com/version/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide) [![downloads](https://vsmarketplacebadge.apphb.com/downloads/cl.eide.svg)](https://marketplace.visualstudio.com/items?itemName=CL.eide) [![stars](https://badgen.net/github/stars/github0null/eide?icon=github&color=4ab8a1)](https://github.com/github0null/eide)
 
