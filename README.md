@@ -6,7 +6,7 @@
 
 ***
 
-## 更新时间 🕔 2020/12/4 19:00
+## 更新时间 🕔 2020/12/15 15:00
 🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
@@ -131,21 +131,49 @@
 
 ## 编译项目 🔨
 
-### 工具链说明
+### 支持的工具链
 
-#### 8051 项目
+- #### Keil_C51 工具链
 
-**支持的工具链**：Keil_C51、SDCC
+  介绍：使用 Keil C51 自带的编译工具进行编译
 
-!> **注意**：插件使用的 Keil_C51 工具链的 **链接器** 和 **汇编器** 为 **LX51** 和 **A51**
+  > 适用项目: 8051 项目
 
-#### STM8 项目
+  > 提示：插件使用的 Keil_C51 工具链的 链接器 和 汇编器 为 LX51 和 A51
 
-**支持的工具链**：IAR_STM8、SDCC
+  !> **注意**：使用前必须完全破解 Keil C51，否则可能会链接失败
 
-#### Cortex-M 项目
+- #### SDCC (Small Device C Compiler) 工具链
 
-**支持的工具链**：ARMCC V5、ARMCC V6，GCC
+  介绍：使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
+
+  > 适用项目: 8051, STM8, Z80 ... 项目
+  
+  !> **注意**：强烈建议使用最新版本的 SDCC, 目前是 4.0, 因为过旧的版本可能不支持多文件编译，以及某些重要的编译参数, 这可能会引发一系列的编译错误
+
+- #### IAR-STM8 工具链
+
+  介绍：使用 IAR-STM8 自带的编译工具 iccstm8 进行编译
+
+  > 适用项目: STM8 项目
+
+  !> **注意**：使用前必须完全破解 IAR-STM8
+
+- #### AC5/AC6 (ARMCC) 工具链
+
+  介绍：使用 Keil-MDK 自带的编译工具 ARMCC 进行编译
+
+  > 适用项目: Cortex-M 项目
+
+  > 提示：AC5 是指 ARMCC 版本 5 的编译工具;  AC6 是指 ARMClang 编译工具
+
+  !> **注意**：使用前必须完全破解 Keil-MDK
+
+- #### ARM-GCC (GNU Arm Embedded Toolchain) 工具链
+
+  介绍：使用免费的编译工具 [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) 进行编译
+
+  > 适用项目: Cortex-M 项目
 
 ***
 
@@ -173,9 +201,10 @@
 ***
 
 #### IAR_STM8 工具链
+
 ?>略
 
-#### ARMCC 工具链
+#### AC5/AC6 (ARMCC) 工具链
 
 打开**编译配置**：点击下图按钮打开对应的配置
 
@@ -191,10 +220,8 @@
 
 ***
 
-#### ARMCLang 工具链
-?>略
+#### ARM-GCC 工具链
 
-#### ARM GCC 工具链
 ?>略
 
 ***
@@ -506,10 +533,9 @@ STVP 工具配置界面如图
 
 ***
 
-## 注意事项和常见问题 🚩
-### 注意事项
-#### SDCC
-##### 编译选项
+## 注意事项 🚩
+
+### SDCC 编译选项
 
 SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函数的源文件生成的**，因此**必须要设置包含 main 函数的源文件名**。
 
@@ -519,7 +545,7 @@ SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函
 
 ***
 
-#### 语法提示
+### 语法提示
 
 **v1.10.1** 及以后，对于 ARMCC 、SDCC、GCC 工具链已完成了关键字的基本扩展，不再默认关闭语法提示，如需要请手动关闭。
 
@@ -533,21 +559,43 @@ SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函
 
 ***
 
-### 其他问题
+## 常见问题 ❓
 
-#### 问题：编译不通过
+### 问题：编译不通过
 
 > 提示：请仔细阅读编译器给出的输出提示，将错误提示放到网络上查询，无法解决的，可通过 github issue 进行反馈
 
-#### 问题：安装了 stcgal 但启动下载时提示无法找到 stcgal 模块
+***
+
+### 问题：SDCC 编译提示未定义的段
+
+问题详情：
+
+ 使用 SDCC 编译 8051 项目，链接时出现以下提示：
+
+ ```
+ ASlink-Warning-No definition of area HOME
+ ASlink-Warning-No definition of area XSEG
+ ASlink-Warning-No definition of area PSEG
+ ```
+
+> 可能原因：SDCC 版本过低；`解决办法`：卸载旧版本，安装最新的 SDCC 之后重试
+
+***
+
+### 问题：安装了 stcgal 但启动下载时提示无法找到 stcgal 模块
 
 > 原因：电脑上有多个 Python；`解决办法`：卸载多余的 python，删除环境变量 path 中多余的 python 路径，重启 vscode 后重试
 
-#### 问题：使用 Keil_C51 编译时链接失败,  提示 Error L257
+***
 
-> 原因：Keil C51 未破解，存在大小限制，`解决办法`: 完全破解 Keil C51 后再尝试
+### 问题：使用 Keil_C51 编译时链接失败,  提示 Error L257
+
+问题截图：
 
 ![](https://img-blog.csdnimg.cn/20200506211039857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+> 原因：Keil C51 未破解，存在大小限制，`解决办法`: 完全破解 Keil C51 后再尝试
 
 ***
 
