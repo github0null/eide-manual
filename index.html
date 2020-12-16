@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -16,16 +16,23 @@
 </head>
 
 <body>
-  
+
   <div id="app"></div>
 
   <script>
     window.$docsify = {
+
+      // global config
       name: 'EIDE Manual',
       repo: 'https://github.com/github0null/eide/',
       coverpage: true,
       loadSidebar: true,
-      subMaxLevel: 6
+      subMaxLevel: 6,
+
+      // search config
+      search: ['/'],
+      maxAge: 600000, // Expiration time, 10 min
+      depth: 4
     }
   </script>
 
@@ -51,11 +58,7 @@
   </script>
 
   <!-- search -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
-  
-  <!-- counter -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>
