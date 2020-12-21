@@ -6,25 +6,19 @@
 
 ***
 
-## 更新时间 🕔 2020/12/15 16:00
+## 更新时间 🕔 2020/12/21 17:00
 🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
 ## 准备工作 🏃‍♀️
 
-### 了解项目目录结构 📚
+### 运行环境
 
-基本结构如下：
+`系统要求`：Windows 7 及以上
 
-![](https://img-blog.csdnimg.cn/20200825104645802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+`.NET环境`：.NET FrameWork 3.5
 
-- `.eide` 项目文件的目录和 EIDE 日志存放的位置
-- `.vscode` vscode 配置文件目录
-- `deps` CMSIS 组件 和 内置组件 的存放位置, 其中内容由 EIDE 自动添加、创建、管理
-- `out` EIDE 的编译输出目录, 编译产生的文件存放在此处
-- `pack`  CMSIS 包的安装位置, 用户无需更改此文件夹下的内容
-- `src` 默认的源文件的目录, 也可以通过 [添加源文件目录](#添加源文件目录) 来添加其他的目录
-- `*.code-workspace` 工作区文件，每个 eide 项目必须存在
+> 提示：.NET FrameWork 4 及以上可能不兼容 .NET FrameWork 3 的程序。 如果构建工具无法启动，可能需要单独安装一下 .NET FrameWork 3.5
 
 ### 设置工具链的路径
 
@@ -36,6 +30,20 @@
  - `红色叉`❌：还没有设置任何工具链路径
 
 ![](https://img-blog.csdnimg.cn/20200730115319837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+
+### 了解项目目录结构 📚
+
+基本结构如下：
+
+![](https://img-blog.csdnimg.cn/20200825104645802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+- `.eide` eide 项目文件, 项目依赖 和 日志存放的位置
+- `.vscode` vscode 配置文件目录
+- `out` EIDE 的编译输出目录, 编译产生的文件存放在此处
+- `pack`  CMSIS 包的安装位置, 用户无需更改此文件夹下的内容
+- `src` 默认的源文件的目录, 也可以通过 [添加源文件目录](#添加源文件目录) 来添加其他的目录
+- `*.code-workspace` 工作区文件，每个 eide 项目必须存在
 
 ***
 
@@ -59,41 +67,116 @@
 
 ### 配合 STM32CubeMX 开始
 
+注：使用 CubeMX 生成基本的外设的初始化代码
+
 [参考此博客](https://blog.csdn.net/qq_40833810/article/details/107585306)
 
-### 从空项目开始（以 stm32 为例） 
+### 从空项目开始（以 stm32f1 为例） 
 
-1. 转到 Operation 栏，点击**新建项目**，并选择 **Cortex-M MCU** 类型，然后输入**项目名称**，选择**项目保存位置**之后完成创建
+注：手动创建项目
+
+在开始之前需要下载并解压相应芯片的外设库，此处为 [STM32F1 标准外设驱动](https://www.st.com/content/st_com/zh/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-libraries/stsw-stm32054.html#get-software)
+
+#### 1. 转到 Operation 栏，点击**新建项目**，并选择 **Cortex-M MCU** 类型，然后输入**项目名称**，选择**项目保存位置**之后完成创建
 
  ![](https://img-blog.csdnimg.cn/2020062921534834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-2. 创建完成之后打开项目，将 ST 的标准外设库 复制到项目目录下；并将 Project/STM32F10x_StdPeriph_Template 目录里的 stm32f10x_conf.h 复制到项目目录
+ 创建完成的项目根目录如下
 
- ![](https://img-blog.csdnimg.cn/20200629220514325.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](./img/prj_root.png)
 
- ![](https://img-blog.csdnimg.cn/2020062922315036.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+#### 2. 创建完成之后打开项目，开始复制文件
 
-3. 将 Libraries 目录添加到源文件目录中
+ 在项目目录下新建一个 `hal` 文件夹用于存放库，将解压好的外设库目录里的 Libraries/STM32F10x_StdPeriph_Driver 文件夹复制到 hal 文件夹内；
 
- ![](https://img-blog.csdnimg.cn/20200629221100976.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](./img/prj_copy_lib.png)
+ 
+ 然后将 Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/arm 目录里的启动文件 startup_stm32f10x_x.s 复制到项目的 src 目录下
 
-4. 使用 **排除功能** 排除多余的**启动文件**，和 不使用的外设源文件
+ ![](./img/prj_copy_asm.png)
 
- ![](https://img-blog.csdnimg.cn/20200629221500908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ 将 Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x 目录里的源文件复制到项目的 hal 目录下
 
- ![](https://img-blog.csdnimg.cn/20200629221911681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](./img/prj_copy_core.png)
 
-5. 根据你要使用的芯片，添加一些必要的 **宏** 到项目
+ 将 Project/STM32F10x_StdPeriph_Examples/USART/Printf 目录（可以是其他的示例程序目录）里的 示例程序 复制到 src 文件夹
+
+ > system_stm32f10x.c 已在上一步中复制过了，这里不用复制，因为重复的源文件在链接时会导致 `重复的定义` 这类错误
+
+ ![](./img/prj_copy_src.png)
+
+#### 3. 将 hal 文件夹添加到项目结构中
+
+ ![](./img/prj_add_folder.png)
+
+ 点击 `install CMSIS Header` 将 CMSIS 的头文件添加到项目中
+
+ ![](./img/prj_ins_cmsis.png)
+
+#### 4. 使用 **排除功能** 排除不使用的外设源文件
+
+ ![](./img/prj_exc_file.png)
+
+#### 5. 根据你要使用的芯片，添加一些必要的 **宏** 到项目
 
  ![](https://img-blog.csdnimg.cn/20200629222227148.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-6. 选择好 CPU 类型，设置好 芯片 RAM，FLASH 地址和大小
+#### 6. 设置要使用的工具链，本例选择 AC5 (ARMCC 5),  选择好 CPU 类型为 Cortex-M3, 然后将 `使用自定义的脚本/UseCustomScatterFile` 选项设置为 false, 然后点击 `RAM/FLASH layout 选项` 开始设置芯片的 RAM/ROM 地址信息
 
  ![](https://img-blog.csdnimg.cn/20200629224834568.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-7. 打开 main.c 开始编写示例代码，点击编译按钮完成项目编译
+ 设置芯片的地址信息，然后保存
 
- ![](https://img-blog.csdnimg.cn/20200629225055460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](./img/prj_set_flash_info.png)
+
+#### 7. 打开 main.c 开始编写示例代码，保存然后编译
+
+ 本处的示例代码：
+
+ ```c++
+  /*
+  * ************************************************
+  * 
+  * STM32 blink demo
+  * 
+  * CPU:     STM32F103C8
+  * PIN:     PA0
+  * 
+  * ************************************************
+  */
+
+  #include "stm32f10x.h"
+
+  void delay(int x)
+  {
+      for (int i = 0; i < x; i++)
+      {
+          // nop ;
+      }
+  }
+
+  int main()
+  {
+      GPIO_InitTypeDef gpioDef;
+      RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+      gpioDef.GPIO_Mode = GPIO_Mode_Out_PP;
+      gpioDef.GPIO_Pin = GPIO_Pin_0;
+      gpioDef.GPIO_Speed = GPIO_Speed_10MHz;
+      GPIO_Init(GPIOA, &gpioDef);
+
+      while (1)
+      {
+          GPIO_WriteBit(GPIOA, GPIO_Pin_0, !GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0));
+          delay(500000);
+      }
+  }
+ ```
+
+ 编译项目：
+
+ ![](./img/prj_build.png)
+
+***
 
 ### 从项目模板创建工程 
 

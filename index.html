@@ -10,6 +10,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 
+  <style>
+    .git-talk-btn {
+      z-index: 100;
+      position: fixed;
+      bottom: 0;
+      right: 10px;
+      padding: 1em 3em;
+      background-color: #36bc98;
+      border: 0;
+      border-top-left-radius: .5em;
+      border-top-right-radius: .5em;
+      font-family: sans-serif;
+      font-size: 14px;
+      color: azure;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      cursor: hand;
+      transition: all .3s ease;
+    }
+  </style>
+
   <!-- theme -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css"/>
   <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script> -->
@@ -27,7 +51,7 @@
       repo: 'https://github.com/github0null/eide/',
       coverpage: true,
       loadSidebar: true,
-      subMaxLevel: 6,
+      subMaxLevel: 3,
 
       // search config
       search: ['/'],
@@ -59,6 +83,9 @@
 
   <!-- search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!--goto talk-->
+  <a href="./#/?id=评论"class="git-talk-btn">转到评论</a>
 </body>
 
 </html>
