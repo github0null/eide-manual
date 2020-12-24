@@ -1,12 +1,14 @@
 ## 介绍
 
+> 关于 Embedded IDE 的论坛已上线, 有什么问题可以直接在上面交流，[地址](https://discuss.em-ide.com)
+
 [Embedded IDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是 vscode 上的一个用于开发 8051/STM8/Cortex-M 的开发工具。用于在 vscode 上实现单片机的开发，编译，烧录功能
 
 ![preview](./img/preview.png)
 
 ***
 
-## 更新时间 🕔 2020/12/21 17:00
+## 更新时间 🕔 2020/12/24 17:00
 🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
