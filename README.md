@@ -709,3 +709,6 @@ SDCC 在链接时，**被链接的第一个.rel 文件必须是含有 main() 函
 ## 评论
 
 > 将问题反馈到 [EIDE Issue](https://github.com/github0null/eide/issues) 或者 直接在下方留言
+
+> 关于 Embedded IDE 的论坛已上线, 有什么问题也可以直接在上面交流，[地址](https://discuss.em-ide.com)
+
