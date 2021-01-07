@@ -88,6 +88,8 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 >
 > 注意：如果选择 **从 github 获取模板**，请确保网络良好，否则可能会发生连接失败，建议将 模板仓库 克隆到本地，然后选择 **从本地磁盘创建**
 
+![演示](./img/quick_start.gif)
+
 1. 打开 Operation 栏，点击 `新建项目`, 选择 `Get Template From Disk or Github ...` 项
 
  ![](./img/op_new_prj_sel.png)
