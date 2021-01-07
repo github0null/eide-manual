@@ -8,7 +8,7 @@
 
 ***
 
-## 更新时间 🕔 2020/12/24 17:00
+## 更新时间 🕔 2020/1/7 16:00
 🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
@@ -34,7 +34,6 @@
  - `红色叉`❌：还没有设置任何工具链路径
 
 ![](https://img-blog.csdnimg.cn/20200730115319837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-
 
 ### 了解项目目录结构 📚
 
@@ -73,13 +72,47 @@
 
 ![](./img/op_new_prj_sel.png)
 
-### 配合 STM32CubeMX 开始
+### 1. 从 EIDE 内置的项目模板创建
 
-注：使用 CubeMX 生成基本的外设的初始化代码
+打开 Operation 栏，点击 `新建项目`, 选择 `Create Project By Internal Template` 项
 
-[参考此博客](https://blog.csdn.net/qq_40833810/article/details/107585306)
+![](./img/op_new_prj_sel.png)
 
-### 从空项目开始（以 stm32f1 为例） 
+eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模板创建一个示例项目
+
+![](./img/op_new_prj_tmp.png)
+
+### 2. 从 Github 仓库或者 本地磁盘 拉取模板并创建工程
+
+> 提示：你可以在插件设置中配置自己的模板仓库位置，默认使用作者提供的仓库
+>
+> 注意：如果选择 **从 github 获取模板**，请确保网络良好，否则可能会发生连接失败，建议将 模板仓库 克隆到本地，然后选择 **从本地磁盘创建**
+
+1. 打开 Operation 栏，点击 `新建项目`, 选择 `Get Template From Disk or Github ...` 项
+
+ ![](./img/op_new_prj_sel.png)
+
+ 然后选择从 `磁盘` 或者 [Github 模板仓库](https://github.com/github0null/eide-doc) 创建获取模板.
+
+ ![](./img/op_new_prj_tmp_online.png)
+
+ 如果选择从 Github 获取模板，eide 会从默认仓库拉取模板信息，然后弹出对话框让你选择模板，然后完成创建
+
+ ![](./img/op_new_prj_sel_tmp.png)
+
+2. 打开创建好的项目，开始进行一些项目的配置
+
+3. 如果模板使用了 CMSIS 包，你需要先修改你**要使用的芯片型号**
+
+ ![](https://img-blog.csdnimg.cn/2020063000331436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+4. 通过 CMSIS 包里的 **安装/删除 外设组件功能** 来 **启用/禁用 你要使用的标准外设**
+
+ ![](https://img-blog.csdnimg.cn/20200630003830242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+
+5. 开始编写程序。
+
+### 3. 从空项目开始（以 stm32f1 为例） 
 
 注：手动创建项目
 
@@ -189,52 +222,6 @@
  编译项目：
 
  ![](./img/prj_build.png)
-
-***
-
-### 从项目模板创建工程 
-
-> 提示：将经常使用的项目结构打包成项目模板，重复利用，可以避免手动创建项目的繁琐步骤
-
-#### 从 EIDE 内置的项目模板创建
-
-打开 Operation 栏，点击 `新建项目`, 选择 `Create Project By Internal Template` 项
-
-![](./img/op_new_prj_sel.png)
-
-eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模板创建一个示例项目
-
-![](./img/op_new_prj_tmp.png)
-
-#### 从 Github 仓库或者 本地磁盘 加载模板
-
-> 提示：你可以在插件设置中配置自己的模板仓库位置，默认使用作者提供的仓库
->
-> 注意：如果选择 **从 github 获取模板**，请确保网络良好，否则可能会发生连接失败，建议将 模板仓库 克隆到本地，然后选择 **从本地磁盘创建**
-
-1. 打开 Operation 栏，点击 `新建项目`, 选择 `Get Template From Disk or Github ...` 项
-
- ![](./img/op_new_prj_sel.png)
-
- 然后选择从 `磁盘` 或者 [Github 模板仓库](https://github.com/github0null/eide-doc) 创建获取模板.
-
- ![](./img/op_new_prj_tmp_online.png)
-
- 如果选择从 Github 获取模板，eide 会从默认仓库拉取模板信息，然后弹出对话框让你选择模板，然后完成创建
-
- ![](./img/op_new_prj_sel_tmp.png)
-
-2. 打开创建好的项目，开始进行一些项目的配置
-
-3. 如果模板使用了 CMSIS 包，你需要先修改你**要使用的芯片型号**
-
- ![](https://img-blog.csdnimg.cn/2020063000331436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-
-4. 通过 CMSIS 包里的 **安装/删除 外设组件功能** 来 **启用/禁用 你要使用的标准外设**
-
- ![](https://img-blog.csdnimg.cn/20200630003830242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-
-5. 开始编写程序。
 
 ***
 
@@ -580,6 +567,7 @@ STVP 工具配置界面如图
 ***
 
 ## 常用功能 🔥
+
 ### 从包中添加外设组件
 
 > 解释：外设组件包含的内容是与此外设相关的头文件，源文件，asm 文件；添加某个外设，该外设的所有内容将会被复制到 dependence/<包名>/<外设名> 目录下，此目录会被自动加入到源文件目录列表中，同时此目录的 创建，删除，更新 由 eide 管理，但目录里的文件可以由用户随意删改
