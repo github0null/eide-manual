@@ -72,21 +72,11 @@
 
 ![](./img/op_new_prj_sel.png)
 
-### 1. 从 EIDE 内置的项目模板创建
+### 2. 从 Github 仓库拉取模板并创建工程 （建议使用此方式）
 
-打开 Operation 栏，点击 `新建项目`, 选择 `Create Project By Internal Template` 项
+作者正在向[模板仓库](https://github.com/github0null/eide-doc)不断增加新的模板工程，这将会使创建项目更加快捷方便
 
-![](./img/op_new_prj_sel.png)
-
-eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模板创建一个示例项目
-
-![](./img/op_new_prj_tmp.png)
-
-### 2. 从 Github 仓库或者 本地磁盘 拉取模板并创建工程
-
-> 提示：你可以在插件设置中配置自己的模板仓库位置，默认使用作者提供的仓库
->
-> 注意：如果选择 **从 github 获取模板**，请确保网络良好，否则可能会发生连接失败，建议将 模板仓库 克隆到本地，然后选择 **从本地磁盘创建**
+!> 注意：如果选择 **从 github 获取模板**，请确保网络良好，否则可能会发生连接失败
 
 ![演示](./img/quick_start.gif)
 
@@ -100,23 +90,37 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 
  如果选择从 Github 获取模板，eide 会从默认仓库拉取模板信息，然后弹出对话框让你选择模板，然后完成创建
 
+ > 提示：你可以在插件设置中配置自己的模板仓库位置，默认使用作者提供的仓库，也欢迎大家将自己的模板通过 PR 分享到默认仓库
+
  ![](./img/op_new_prj_sel_tmp.png)
 
 2. 打开创建好的项目，开始进行一些项目的配置
 
-3. 如果模板使用了 CMSIS 包，你需要先修改你**要使用的芯片型号**
+3. 如果模板使用了 CMSIS 包（如果没有，可跳过此步骤），你需要先修改你**要使用的芯片型号**
 
  ![](https://img-blog.csdnimg.cn/2020063000331436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-4. 通过 CMSIS 包里的 **安装/删除 外设组件功能** 来 **启用/禁用 你要使用的标准外设**
+ 通过 CMSIS 包里的 **安装/删除 外设组件功能** 来 **启用/禁用 你要使用的标准外设**
 
  ![](https://img-blog.csdnimg.cn/20200630003830242.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-5. 开始编写程序。
+4. 开始编写程序。
+
+### 2. 从 EIDE 内置的项目模板创建
+
+如果没有网络，导致无法从 Github 模板创建，eide 也提供了一些内置的模板，但十分有限
+
+打开 Operation 栏，点击 `新建项目`, 选择 `Create Project By Internal Template` 项
+
+![](./img/op_new_prj_sel.png)
+
+eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模板创建一个示例项目
+
+![](./img/op_new_prj_tmp.png)
 
 ### 3. 从空项目开始（以 stm32f1 为例） 
 
-注：手动创建项目
+> 注：你需要手动复制文件，组织你的代码和文件夹结构
 
 在开始之前需要下载并解压相应芯片的外设库，此处为 [STM32F1 标准外设驱动](https://www.st.com/content/st_com/zh/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-libraries/stsw-stm32054.html#get-software)
 
