@@ -72,7 +72,7 @@
 
 ![](./img/op_new_prj_sel.png)
 
-### 2. 从 Github 仓库拉取模板并创建工程 （建议使用此方式）
+### 1. 从 Github 仓库拉取模板并创建工程 （建议使用此方式）
 
 作者正在向[模板仓库](https://github.com/github0null/eide-doc)不断增加新的模板工程，这将会使创建项目更加快捷方便
 
