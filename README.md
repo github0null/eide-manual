@@ -8,7 +8,7 @@
 
 ***
 
-## 更新时间 🕔 2020/1/7 16:00
+## 更新时间 🕔 2020/1/10 16:00
 🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
@@ -43,10 +43,10 @@
 
 - `.eide` eide 项目文件, 项目依赖 和 日志存放的位置
 - `.vscode` vscode 配置文件目录
-- `out` EIDE 的编译输出目录, 编译产生的文件存放在此处
+- `out` EIDE 的默认编译输出目录, 编译产生的文件存放在此处，可以在项目的 `其他设置` 里进行修改
 - `pack`  CMSIS 包的安装位置, 用户无需更改此文件夹下的内容
 - `src` 默认的源文件的目录, 也可以通过 [添加源文件目录](#添加源文件目录) 来添加其他的目录
-- `*.code-workspace` 工作区文件，每个 eide 项目必须存在
+- `*.code-workspace` vscode 工作区文件，每个 eide 项目都存在此文件，不要删除此文件
 
 ***
 
