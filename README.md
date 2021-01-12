@@ -523,7 +523,7 @@ STVP 工具配置界面如图
 
 ## 调试你的程序 🔧
 
-**要调试 ARM 的工程，需要安装 [cortex-debug](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)**
+**要调试 ARM 的工程，需要安装 [cortex-debug](https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug)**
 
 **要调试 STM8 的工程，需要安装 [stm8-debugger](https://marketplace.visualstudio.com/items?itemName=CL.stm8-debug)**
 
