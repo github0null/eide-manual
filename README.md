@@ -519,6 +519,22 @@ STVP 工具配置界面如图
 
  ![](https://img-blog.csdnimg.cn/20200714121616638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
+### 使用自定义命令烧录
+
+> 如果你想使用一些其他的烧录程序，但 eide 不支持，你可以使用 `自定义shell命令` 来进行烧录
+
+首点击切换烧录工具到 Custom, 如下图
+
+![](./img/uploader_cus.png)
+
+之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
+
+命令行中所需要的 `hex/bin 文件路径` 可以由变量 \${programFile}/\${hexFile}/\${binFile} 进行替换, 例如：
+
+```shell
+NuLink.exe -w APROM "${hexFile}"
+```
+
 ***
 
 ## 调试你的程序 🔧
