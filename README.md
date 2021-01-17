@@ -565,15 +565,24 @@ NuLink.exe -w APROM "${hexFile}"
 >
 > 如果你想与大家分享你的模板，可以使用 pull request 提交到默认的仓库 [eide-doc](https://github.com/github0null/eide-doc)
 
-**压缩工程需要耗费一定时间，完成导出后会弹出提示**
+右键在菜单中点击 `Export EIDE Template` 就会开始生成模板，压缩工程需要耗费一定时间，完成导出后会弹出提示
 
-![](https://img-blog.csdnimg.cn/20200825103745230.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+![](./img/export_template.png)
 
-`默认的排除目录，导出的模板中将不会含有这些目录`
+**下面是默认的排除目录，导出的模板中将不会含有这些目录**
 
-![](https://img-blog.csdnimg.cn/20200319161607901.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+```txt
+'.git',
+'.git\\*',
+`${prjOutFolder}`,
+`${prjOutFolder}\\*`,
+'*.eide-template',
+'*.log'
 
-**也可以在项目根目录下新建一个 .eideignore 文件，在里面填写需要排除的文件**
+其中 ${prjOutFolder} 代指 项目的编译输出目录
+```
+
+如果你还要在打包时排除其他目录，你可以在项目根目录下新建一个 .eideignore 文件，在里面填写需要排除的文件
 
 ![](https://img-blog.csdnimg.cn/20200825103530122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
