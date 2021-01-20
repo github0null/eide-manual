@@ -50,13 +50,19 @@
       name: 'EIDE Manual',
       repo: 'https://github.com/github0null/eide/',
       coverpage: true,
+
       loadSidebar: true,
-      subMaxLevel: 3,
+      maxLevel: 4,
+      //subMaxLevel: 2,
 
       // search config
       search: ['/'],
       maxAge: 600000, // Expiration time, 10 min
-      depth: 4
+
+      // topMargin: 90, // default: 0
+      topMargin: 20,
+
+      formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}'
     }
   </script>
 
@@ -93,7 +99,7 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
 
   <!--goto talk-->
-  <a href="./#/?id=评论"class="git-talk-btn">转到评论</a>
+  <a href="./#/?id=评论" class="git-talk-btn">评论</a>
 </body>
 
 </html>

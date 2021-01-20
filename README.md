@@ -1,15 +1,14 @@
-## 介绍
 
-> 关于 Embedded IDE 的论坛已上线, 有什么问题可以直接在上面交流，[地址](https://discuss.em-ide.com)
+<p style="font-size: 22px;">文档更新时间🕔：{docsify-updated} , eide 更新日志：<a href="https://marketplace.visualstudio.com/items/CL.eide/changelog"> CHANGE.LOG </a></p>
+
+## 介绍
 
 [Embedded IDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是 vscode 上的一个用于开发 8051/STM8/Cortex-M 的开发工具。用于在 vscode 上实现单片机的开发，编译，烧录功能
 
+> 关于 Embedded IDE 的论坛已上线, 有什么问题可以直接在上面交流，[地址](https://discuss.em-ide.com)
+
 ![preview](./img/preview.png)
 
-***
-
-## 更新时间 🕔 2020/1/17 22:00
-🔔 每次更新后注意查看插件的 [CHANGE.LOG](https://marketplace.visualstudio.com/items/CL.eide/changelog) 以得知版本变化
 ***
 
 ## 准备工作 🏃‍♀️
@@ -457,6 +456,23 @@ STVP 工具配置界面如图
 
 ![](https://img-blog.csdnimg.cn/20201204184429743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
+
+### 使用自定义命令烧录
+
+> 如果你想使用一些其他的烧录程序，但 eide 不支持，你可以使用 `自定义shell命令` 来进行烧录
+
+首点击切换烧录工具到 Custom, 如下图
+
+![](./img/uploader_cus.png)
+
+之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
+
+命令行中所需要的 `hex/bin 文件路径` 可以由变量 \${programFile}/\${hexFile}/\${binFile} 进行替换, 例如：
+
+```bash
+NuLink.exe -w APROM "${hexFile}"
+```
+
 ### ARM 工程
 
 > 提示: 对于 arm 工程，eide 支持 4 种常用的烧录方式，由于 **JLink** 和 **STLink** 配置较为简单，因此此处只介绍 **pyOCD** 和 **OpenOCD** 的烧录配置
@@ -518,22 +534,6 @@ STVP 工具配置界面如图
 3. 点击下载按钮完成下载
 
  ![](https://img-blog.csdnimg.cn/20200714121616638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-
-### 使用自定义命令烧录
-
-> 如果你想使用一些其他的烧录程序，但 eide 不支持，你可以使用 `自定义shell命令` 来进行烧录
-
-首点击切换烧录工具到 Custom, 如下图
-
-![](./img/uploader_cus.png)
-
-之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
-
-命令行中所需要的 `hex/bin 文件路径` 可以由变量 \${programFile}/\${hexFile}/\${binFile} 进行替换, 例如：
-
-```bash
-NuLink.exe -w APROM "${hexFile}"
-```
 
 ***
 
@@ -606,6 +606,22 @@ NuLink.exe -w APROM "${hexFile}"
 ![serialport](./img/serial_port.png)
 
 ***
+
+## 安装芯片支持包 (仅用于ARM工程)
+
+> 你可以为芯片安装支持包，支持包为常用的 keil package, 在 Keil 官网就可以下载
+
+- 单击 安装 按钮，从文件资源管理器中选择一个 keil package 然后安装
+
+ ![pack view](./img/cmsis_pack.png)
+
+- 安装成功后，你可以为你的项目选择芯片
+
+ ![set device](./img/pack_set_dev.png)
+
+- 之后，你还可以查看或启用 keil package 内部附带的外设库组件
+
+ ![enable componets](./img/pack_active_comp.png)
 
 ## 常用功能 🔥
 
