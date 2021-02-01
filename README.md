@@ -295,11 +295,9 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 
 对于 **SDCC** 的配置，见下图：
 
-1. 其中带有 **<>** 的选项，被 **<>** 包含的内容应该 **被替换为某个确定的值** ，见下图，如何取值见 **SDCC** 的手册
-2. 当你成功替换了 **<>** 中的值，json验证器会产生警告，不用理会它，如下图
-3. 悬停提示带有 **[]** 的选项，被 **[]** 包含的内容代表着此选项适用的 **设备** ，如下图
+![](./img/cmp_conf_sdcc.png)
 
-![](https://img-blog.csdnimg.cn/2020032621351451.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+- 其中带有 **<>** 的选项，被 **<>** 包含的内容应该 **被替换为某个值** (不要理会 json 验证器产生的警告)，如何取值见 **SDCC** 的手册
 
 ***
 
