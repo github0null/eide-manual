@@ -625,9 +625,19 @@ eide 允许为项目创建多个目标(Target)，即 **不同的项目配置**
 
 ## 安装芯片支持包 (仅用于ARM工程)
 
-> 你可以为芯片安装支持包，支持包为常用的 keil package, 在 Keil 官网就可以下载
+> 你可以为芯片安装支持包，用来为项目添加芯片信息、添加外设组件
 
-- 单击 安装 按钮，从文件资源管理器中选择一个 keil package 然后安装
+### 下载
+
+芯片支持包可以从以下位置下载：
+
+ - [keil 官网](https://www.keil.com/dd2/pack)
+
+ - [eide 共享文件夹](https://share.em-ide.com/#/2/main/keil_pack)
+
+### 安装
+
+- 单击 安装 按钮，从文件资源管理器中选择一个下载好的包，然后安装
 
  ![pack view](./img/cmsis_pack.png)
 
