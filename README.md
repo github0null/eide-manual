@@ -113,7 +113,7 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
 通过点击 **项目资源** 栏上的 <img width="16px" bor src="./img/add_folder.svg"> 图标，可以为项目添加 **源文件夹**
 
-![add source folder](./img/prj_add_folder.png)
+![add source folder](./img/prj_add_folder_sel.png)
 
 可以添加的文件夹类型有两种：**文件系统中的文件夹**<img width="16px" bor src="./icon/FolderRoot_32x.svg"> 和 **虚拟文件夹**<img width="16px" bor src="./icon/folder_virtual.svg">，当：
 
@@ -235,7 +235,7 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 
 #### 3. 将 hal 文件夹添加到项目结构中
 
- ![](./img/prj_test_add_folder.png)
+ ![](./img/prj_add_folder.png)
 
  点击 `install CMSIS Header` 将 CMSIS 的头文件添加到项目中
 
