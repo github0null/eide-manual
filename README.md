@@ -7,6 +7,8 @@
 
 > 关于 Embedded IDE 的论坛已上线, 有什么问题可以直接在上面交流，[地址](https://discuss.em-ide.com)
 
+> QQ 交流群：860375447
+
 ![preview](./preview.png)
 
 ***
@@ -67,7 +69,7 @@
 
 ## 导入KEIL项目
 
-!> 此功能需要 v2.0.0 及以上版本支持，同时导入功能只支持 **KEIL 5** 及以上版本
+> 此功能需要 v2.0.0 及以上版本支持
 
 eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式组织源文件
 
@@ -88,6 +90,8 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 4. 导入完成，选择是否立即切换工作区
 
   ![switch workspace](./img/import_done.png)
+
+> 导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
 
 ### 注意事项
 
