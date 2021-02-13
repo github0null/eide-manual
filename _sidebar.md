@@ -1,10 +1,10 @@
 - **开始使用**
   - [简介](README.md)
   - [准备工作](zh-cn/prepare_work.md)
-  - [打开项目](zh-cn/open_project.md)
   - [导入项目](zh-cn/import_project.md)
   - [新建项目](zh-cn/create_project.md)
-  - [工具链和构建配置](zh-cn/toolchain_and_builder.md)
+  - [打开项目](zh-cn/open_project.md)
+  - [构建配置](zh-cn/toolchain_and_builder.md)
   - [构建项目](zh-cn/build_project.md)
   - [烧录程序](zh-cn/download_to_device.md)
   - [调试程序](zh-cn/debug_project.md)
