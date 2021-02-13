@@ -1,4 +1,4 @@
-<img width="180px" style="border-radius: 8%" bor src="img/icon.png">
+<img width="180px" style="border-radius: 20%; transform:scale(0.75)" src="img/icon.png">
 
 # Embedded IDE Manual <small>1.0</small>
 
