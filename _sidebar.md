@@ -1,0 +1,24 @@
+- **开始使用**
+  - [简介](README.md)
+  - [准备工作](zh-cn/prepare_work.md)
+  - [打开项目](zh-cn/open_project.md)
+  - [导入项目](zh-cn/import_project.md)
+  - [新建项目](zh-cn/create_project.md)
+  - [工具链和构建配置](zh-cn/toolchain_and_builder.md)
+  - [构建项目](zh-cn/build_project.md)
+  - [烧录程序](zh-cn/download_to_device.md)
+  - [调试程序](zh-cn/debug_project.md)
+- **项目管理**
+  - [项目资源管理器](zh-cn/project_manager.md)
+  - [芯片支持包](zh-cn/chip_support_pack.md)
+  - [多目标项目](zh-cn/project_targets.md)
+  - [导出项目](zh-cn/export_project.md)
+  - [常用功能](zh-cn/other_functions.md)
+- **内置工具**
+  - [串口监视器](zh-cn/serialport_monitor.md)
+- **注意事项**
+  - [注意事项](zh-cn/notice.md)
+  - [常见问题](zh-cn/Q&A.md)
+- **问题反馈**
+  - [反馈渠道](zh-cn/issue_report.md)
+  - [请我喝咖啡☕](zh-cn/coffee.md)
