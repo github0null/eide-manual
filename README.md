@@ -91,7 +91,7 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
   ![switch workspace](./img/import_done.png)
 
-> 导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
+!> 导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
 
 ### 注意事项
 
