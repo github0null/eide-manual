@@ -10,8 +10,6 @@
 
 作者正在向[模板仓库](https://github.com/github0null/eide-doc)不断增加新的模板工程，这将会使创建项目更加快捷方便
 
-没有找到你想要的模板？ 这里有一个[模板心愿单](https://discuss.em-ide.com/d/14)，在下方评论，描述你想要的模板，作者会尽可能实现的
-
 ![演示](../img/quick_start.gif)
 
 1. 打开 Operation 栏，点击 `新建项目`, 选择 `Get Template From Disk or Github ...` 项
