@@ -57,13 +57,47 @@ NuLink.exe -w APROM "${hexFile}"
 
 ## ARM 工程
 
-> 提示: 对于 arm 工程，eide 支持 4 种常用的烧录方式，由于 **JLink** 和 **STLink** 配置较为简单，因此此处只介绍 **pyOCD** 和 **OpenOCD** 的烧录配置
+eide 支持主流的 4 种烧录工具
 
-!> 注意: 要使用某种烧录工具，必须先安装它，并在 eide 中设置相关路径
+![](./../img/flasher_list.png)
 
-![](https://img-blog.csdnimg.cn/20201204185819137.png)
+### 使用 JLink 烧录程序
 
-### 使用 pyocd 烧录程序到芯片
+> 要使用 JLink, 必须先安装 JLink 软件，并且 JLink 软件的版本必须在 V6.50 及以上
+> 
+> JLink_V650 下载地址：https://www.segger.com/downloads/jlink/JLink_Windows_V650.exe
+
+安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.JLink.ToolDirectory`
+
+搜索到 JLink 设置后，将 JLink 安装目录位置填写到输入框内即可完成 JLink 路径设置
+
+![](../img/jlink_setting.png)
+
+之后打开 eide 项目的 “烧录配置” 栏，切换到 JLink，进行配置
+
+配置完毕之后，即可点击 “下载程序” 按钮进行烧录
+
+![](../img/jlink_flash_conf.png)
+
+### 使用 STLink 烧录程序
+
+> 要使用 STLink, 必须先安装 STLink Utility 软件
+> 
+> STLink Utility 下载地址：https://www.st.com/zh/development-tools/stsw-link004.html
+
+安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.StlinkExePath`
+
+搜索到 STLink 设置后，**在 STLink Utility 安装目录中找到 `STLink_CLI.exe` 的位置**，并将其填写到输入框内即可完成 STLink 路径设置
+
+![](../img/stlink_setting.png)
+
+之后打开 eide 项目的 “烧录配置” 栏，切换到 STLink，进行配置
+
+配置完毕之后，即可点击 “下载程序” 按钮进行烧录
+
+![](../img/stlink_flasher_conf.png)
+
+### 使用 pyocd 烧录程序
 
 > 注意：pyocd 需要 python3 支持，必须先安装 python3
 >
@@ -103,7 +137,7 @@ NuLink.exe -w APROM "${hexFile}"
 
 ***
 
-### 使用 OpenOCD 烧录程序到芯片
+### 使用 OpenOCD 烧录程序
 
 1. 设置好 OpenOCD.exe 的路径
 
