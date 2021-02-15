@@ -1,4 +1,4 @@
-<img width="180px" style="border-radius: 50%; transform:scale(0.8)" src="icon/icon_big.png">
+<img width="180px" src="icon/icon.svg">
 
 # Embedded IDE Manual <small>1.0</small>
 
