@@ -6,7 +6,7 @@
 >
 > 如果你想与大家分享你的模板，可以使用 pull request 提交到默认的仓库 [eide-doc](https://github.com/github0null/eide-doc)
 
-右键在菜单中点击 `Export EIDE Template` 就会开始生成模板，压缩工程需要耗费一定时间，完成导出后会弹出提示
+右键项目，在菜单中点击 `Export EIDE Template` 就会将你的项目打包为模板，压缩工程需要耗费一定时间，完成导出后会弹出提示
 
 ![](../img/export_template.png)
 
