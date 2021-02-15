@@ -1,4 +1,4 @@
-<img width="180px" src="icon/icon.svg">
+<img width="180px" style="transform:scale(0.85)" src="icon/icon.svg">
 
 # Embedded IDE Manual <small>1.0</small>
 
