@@ -142,10 +142,10 @@
 >变量名：\${CompileToolDir}，含义：编译工具所在目录；
 >
 >变量名：\${toolPrefix}, 含义：GCC 工具链前缀，如: arm-none-eabi-
->
->示例，加入以下命令到 afterBuildTasks：del "${OutDir}\\*.o"，含义：在编译结束后删除输出目录下所有的 .o 文件
->
->![](https://img-blog.csdnimg.cn/20200314130436141.png)
+
+示例，加入以下命令到 afterBuildTasks：del "${OutDir}\\*.o"，含义：在编译结束后删除输出目录下所有的 .o 文件
+
+![](https://img-blog.csdnimg.cn/20200314130436141.png)
 
 ### 通过 HEX 生成 Bin 文件
 
