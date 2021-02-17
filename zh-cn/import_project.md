@@ -26,7 +26,7 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
 ## 注意事项
 
-导入 KEIL 项目时，KEIL 项目的 **CPU 浮点类型，芯片储存器布局，编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置
+导入 KEIL 项目时，KEIL 项目的 **CPU 浮点类型，芯片储存器布局，编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置，否则将使用默认值
 
 ![project compiler config](../img/prj_cmp_conf.png)
 
