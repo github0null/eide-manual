@@ -24,9 +24,15 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 	
 ## STM8 工程
 
-> STM8 工程需要使用 [STVP 下载器](https://www.st.com/zh/development-tools/stvp-stm8.html)完成下载，因此需要安装 STVP
->
-> 安装完成之后在 eide 插件设置中设置 **STVP_CmdLine.exe** 的绝对路径
+> 烧录 STM8 工程需要先安装 STVP，官方下载地址：https://www.st.com/zh/development-tools/stvp-stm8.html
+> 
+> STVP 精简版下载地址：https://share.em-ide.com/s/aat83w
+
+安装完成之后需要在 eide 插件设置中设置 `STVP_CmdLine.exe` 的绝对路径
+
+打开 vscode 设置，搜索栏输入：`EIDE.STM8.STVP.CliExePath`, 搜索到 STVP 设置后，将路径填写到其中即可
+
+![](../img/stvp_setting.png)
 
 STVP 工具配置界面如图
 
@@ -39,9 +45,9 @@ STVP 工具配置界面如图
 ![](https://img-blog.csdnimg.cn/20201204184429743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
 
-## 使用自定义命令烧录
+## 使用自定义命令行烧录
 
-> 如果你想使用一些其他的烧录程序，但 eide 不支持，你可以使用 `自定义shell命令` 来进行烧录
+> 如果你想使用支持命令行的其他烧录程序，你可以使用 `自定义shell命令` 来进行烧录
 
 首点击切换烧录工具到 Custom, 如下图
 
@@ -49,11 +55,13 @@ STVP 工具配置界面如图
 
 之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
 
-命令行中所需要的 `hex/bin 文件路径` 可以由变量 \${programFile}/\${hexFile}/\${binFile} 进行替换, 例如：
+命令行中所需要的 `hex/bin 文件路径` 可以由变量 `${programFile}` 或 `${hexFile}` 进行替换, 例如：
 
 ```bash
 NuLink.exe -w APROM "${hexFile}"
 ```
+
+***
 
 ## ARM 工程
 
@@ -83,7 +91,9 @@ eide 支持主流的 4 种烧录工具
 
 > 要使用 STLink, 必须先安装 STLink Utility 软件
 > 
-> STLink Utility 下载地址：https://www.st.com/zh/development-tools/stsw-link004.html
+> STLink Utility 官方下载地址：https://www.st.com/zh/development-tools/stsw-link004.html
+>
+> STLink Utility 共享下载地址：https://share.em-ide.com/s/c06xco
 
 安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.StlinkExePath`
 
