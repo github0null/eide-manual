@@ -12,4 +12,3 @@
 > 内测版本地址：https://share.em-ide.com/#/2/main/eide_insiders
 
 ![preview](./preview.png)
-
