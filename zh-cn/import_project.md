@@ -22,11 +22,27 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
   ![switch workspace](../img/import_done.png)
 
+5. **如果是 ARM 项目，还需要在导入后设置构建配置，因为项目导入功能不会导入 mdk 构建配置**
+   
+   - 修改 **使用自定义链接脚本** 为 `false`，并点击修改 **RAM/FLASH** 布局选项
+
+   ![](../img/import_mod_conf_1.png)
+
+   - 此时会打开 FLASH 布局编辑器，打开你的 MDK 项目，将布局信息复制到编辑器内的相应位置, 点击下方的 **保存** 即可
+   
+   ![](../img/import_mod_conf_2.png) 
+
+   - 打开项目的 **编译器选项**，将 MDK C/C++, asm, linker 选项卡里的配置设置到 json 配置的相应字段中
+
+   ![](../img/import_mod_cmp_options.png)
+
+6. 修改完毕后，即可点击构建按钮启动构建
+
 !> 导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
 
 ## 注意事项
 
-导入 KEIL 项目时，KEIL 项目的 **CPU 浮点类型，芯片储存器布局，编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置，否则将使用默认值
+导入 KEIL 项目时，KEIL 项目的 **编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置，具体参考上面的步骤 5
 
 ![project compiler config](../img/prj_cmp_conf.png)
 
