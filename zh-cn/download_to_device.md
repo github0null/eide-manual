@@ -126,20 +126,20 @@ eide 支持主流的 4 种烧录工具
  ![](https://img-blog.csdnimg.cn/20200707213951601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
 4. 打开 EIDE 项目，配置烧录设置
+   
+   - 填写目标芯片名称
 
- 4.1. 填写目标芯片名称
+     ![](https://img-blog.csdnimg.cn/20200707214308226.png)
 
- ![](https://img-blog.csdnimg.cn/20200707214308226.png)
+   - 命令行输入 `pyocd list -t`，查看所有支持的芯片，如果上一步填写的芯片名存在，**则可以忽略下一步**
 
- 4.2. 命令行输入 `pyocd list -t`，**查看所有支持的芯片，如果存在你所需要的芯片，则忽略步骤 4.3**
+     ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
- ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+   - 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://share.em-ide.com/#/2/main/pyocd_pack)**
 
- 4.3. 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://share.em-ide.com/#/2/main/pyocd_pack)**
+     提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)**
 
- 提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)**
-
- ![](https://img-blog.csdnimg.cn/20200707215417409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+     ![](https://img-blog.csdnimg.cn/20200707215417409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
 5. 连接目标板，点击下载按钮启动下载
 
