@@ -135,7 +135,7 @@ eide 支持主流的 4 种烧录工具
 
  ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
- 4.3. 打开 config 属性，**配置包含该芯片的 keil 包路径（如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://share.em-ide.com/#/2/main/pyocd_pack）**
+ 4.3. 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://share.em-ide.com/#/2/main/pyocd_pack)**
 
  提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)**
 
