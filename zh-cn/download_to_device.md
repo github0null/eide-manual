@@ -149,11 +149,11 @@ eide 支持主流的 4 种烧录工具
 
 ### 使用 OpenOCD 烧录程序
 
-> OpenOCD v0.10.0 下载：https://share.em-ide.com/s/6a7pax
+> OpenOCD-v0.10.0 下载地址：https://share.em-ide.com/s/6a7pax
 
-1. 设置好 OpenOCD.exe 的路径
+1. 打开设置搜索：`EIDE.ARM.OpenOCD.ExePath`, 设置好 OpenOCD.exe 的路径
 
- ![](https://img-blog.csdnimg.cn/20200714121658116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](../img/openocd_conf.png)
 
 2. 将烧录配置切换到 OpenOCD，设置 `target` 和 `interface`。
 
