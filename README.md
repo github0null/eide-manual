@@ -7,8 +7,8 @@
 
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 
-> QQ 交流群：860375447
+> 相关工具下载：https://cloud.em-ide.com/s/R4SY
 
-> 内测版本地址：https://share.em-ide.com/#/2/main/eide_insiders
+> QQ 交流群：860375447
 
 ![preview](./preview.png)
