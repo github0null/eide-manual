@@ -7,8 +7,10 @@
 
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 
-> 文档内资源下载地址：https://cloud.em-ide.com/s/R4SY
+> 博客地址：https://blog.em-ide.com
 
 > QQ 交流群：860375447
+
+> **文档内资源下载地址：https://cloud.em-ide.com/s/R4SY**
 
 ![preview](./preview.png)
