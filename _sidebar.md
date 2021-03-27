@@ -1,5 +1,7 @@
-- **开始使用**
+- **简述**
   - [简介](README.md)
+  - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
+- **开始使用**
   - [准备工作](zh-cn/prepare_work.md)
   - [导入项目](zh-cn/import_project.md)
   - [新建项目](zh-cn/create_project.md)

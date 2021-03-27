@@ -1,5 +1,5 @@
 
-<p style="font-size: 22px;">文档更新时间🕔：{docsify-updated} , eide 更新日志：<a href="https://marketplace.visualstudio.com/items/CL.eide/changelog"> CHANGE.LOG </a></p>
+<p style="font-size: 22px;">文档更新时间🕔：{docsify-updated}</p>
 
 ***
 

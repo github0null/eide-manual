@@ -94,7 +94,7 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 
  ![](../img/prj_add_folder.png)
 
- 点击 `install CMSIS Header` 将 CMSIS 的头文件添加到项目中
+ 右键菜单，点击 `install cmsis header files` 将 CMSIS 的头文件添加到项目中
 
  ![](../img/prj_ins_cmsis.png)
 
