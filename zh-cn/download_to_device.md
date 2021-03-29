@@ -164,7 +164,7 @@ eide 支持主流的 4 种烧录工具
 
      ![](https://img-blog.csdnimg.cn/20200707214308226.png)
 
-   - 命令行输入 `pyocd list -t`，查看所有支持的芯片，如果上一步填写的芯片名存在，**则可以忽略下一步**
+   - 命令行输入 `pyocd list -t`，查看内置支持的芯片，如果上一步填写的芯片名存在，**则可以跳过后续步骤**，否则继续下一步
 
      ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
