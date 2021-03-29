@@ -18,8 +18,8 @@
   - [常用功能](zh-cn/other_functions.md)
 - **内置工具**
   - [串口监视器](zh-cn/serialport_monitor.md)
-- **注意事项**
-  - [注意事项](zh-cn/notice.md)
+- **经验教训**
+  - [SDCC的使用](zh-cn/sdcc.md)
   - [常见问题](zh-cn/Q&A.md)
 - **问题反馈**
   - [反馈渠道](zh-cn/issue_report.md)
