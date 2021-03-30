@@ -32,9 +32,9 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
    
    ![](../img/import_mod_conf_2.png) 
 
-   - 打开项目的 **编译器选项**，将 MDK C/C++, asm, linker 选项卡里的配置设置到 json 配置的相应字段中
+   - 打开项目的 **编译器选项**，将 MDK 的 **C/C++, asm, linker 选项卡**里的配置设置到相应字段中，设置完毕后保存即可
 
-   ![](../img/import_mod_cmp_options.png)
+   ![](../img/prj_builder_options.png)
 
 6. 修改完毕后，即可点击构建按钮启动构建
 

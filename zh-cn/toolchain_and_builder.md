@@ -2,7 +2,7 @@
 
 ## 支持的工具链
 
-### 51/STM8工程
+### 8051/STM8工程
 
 - #### Keil_C51 工具链
 
@@ -19,6 +19,8 @@
   介绍：使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
 
   > 适用项目: 8051, STM8, Z80 ... 项目
+  >
+  > 建议在使用 SDCC 前阅读：[SDCC的使用](zh-cn/sdcc?id=程序编写)
   
   !> **注意**：强烈建议使用最新版本的 SDCC, 目前是 4.0, 因为过旧的版本可能不支持多文件编译，以及某些重要的编译参数, 这可能会引发一系列的编译错误
 
@@ -50,33 +52,19 @@
 
 ***
 
-## 编译配置
+## 编译选项
 
-### 51/STM8工程
+> 自 2.4.0 起，eide 支持使用 Web 页面进行编译器参数的配置
 
-> eide 使用 json 文件保存所有的编译选项，点击 **编译器选项** 上的 **更改** 按钮即可打开 json 配置
-> 
-> json 配置的所有字段带有悬停提示和补全，可以根据悬停提示阅读其含义
+点击 **构建配置** -> **编译器选项** 的修改按钮即可打开参数配置页面
 
-![](../img/build_no_arm_conf.png)
+![](./../img/prj_builder_options.png)
 
-#### KEIL_C51 工具链
+### 8051/STM8 工程
 
-?>略
-
-#### SDCC 工具链
-
-对于 **SDCC** 的配置，见下图：
-
-![](../img/cmp_conf_sdcc.png)
-
-- 其中带有 **<>** 的选项，被 **<>** 包含的内容应该 **被替换为某个值** (不要理会 json 验证器产生的警告)，如何取值见 **SDCC** 的手册
+?> 略
 
 ***
-
-#### IAR_STM8 工具链
-
-?>略
 
 ### ARM工程
 
@@ -97,21 +85,9 @@
   
     ![](../img/build_nouse_custom_lds.png)
   
-- **编译器选项**：其他的编译参数，点击修改按钮，会打开一个 json 配置文件，修改其中的字段即可，所有字段带有悬停提示和补全，可以根据悬停提示阅读其含义
-
 #### AC5/AC6 (ARMCC) 工具链
 
-打开**编译配置**：点击下图按钮打开对应的配置
-
-![](https://img-blog.csdnimg.cn/20200825104122532.png)
-
-**编译配置** 带有 **悬停提示** 和 **自动补全**
-
-![](https://img-blog.csdnimg.cn/20200316134804816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
-
-**切换工具链**
-
-![](https://img-blog.csdnimg.cn/20200825104020726.png)
+?>略
 
 ***
 
@@ -123,11 +99,13 @@
 
 ## 附加用户命令到构建流程
 
-**编译配置**->**afterBuildTasks、beforeBuildTasks**  使用 CMD 执行，可用于扩展编译流程，其中：
+**编译器选项**->**User Task**  可用于扩展编译流程，其中：
 
-  - `beforeBuildTasks` 代表构建前要执行的操作
+  - `Prebuild Task` 代表**构建开始前**要执行的操作
 
-  - `afterBuildTasks` 代表构建后要执行的操作
+  - `Post-build Task` 代表**构建结束后**要执行的操作
+
+![](./../img/builder_user_task.png)
 
 命令中可用的 **路径变量**, 变量名不区分大小写：
 
@@ -143,39 +121,27 @@
 >
 >变量名：\${toolPrefix}, 含义：GCC 工具链前缀，如: arm-none-eabi-
 
-示例，加入以下命令到 afterBuildTasks：del "${OutDir}\\*.o"，含义：在编译结束后删除输出目录下所有的 .o 文件
+示例，加入以下命令到 Post-build Task：`cd "${OutDir}" && del *._*`，含义：在编译结束后删除输出目录下所有匹配 `*._*` 的文件
 
-![](https://img-blog.csdnimg.cn/20200314130436141.png)
+![](./../img/add_builder_task.png)
 
-### 通过 HEX 生成 Bin 文件
-
-在编译选项 ->**afterBuildTasks** 中添加下图所示命令
-```json
-{
-	"name": "output bin file",
-    "command": "\"${exeDir}\\hex2bin.exe\" -b -c \"${outDir}\\${targetName}.hex\""
-}
-```
-
-### ARMCC 生成 S19 格式的烧录文件
-
-在编译选项 ->**afterBuildTasks** 中添加下图所示命令
-
-```json
-{
-	"name": "output s19",
-    "command": "\"${CompileToolDir}\\fromelf\" --m32combined -o \"${OutDir}\\${targetName}.s19\" \"${OutDir}\\${targetName}.axf\""
-}
-```
 ***
 
-### 查看 GCC 生成的程序大小信息
+### 常用命令
 
-在编译选项 ->**afterBuildTasks** 中添加下图所示命令
+#### 通过 HEX 生成 Bin 文件
 
-```json
-{
-	"name": "show total size",
-	"command": "\"${CompileToolDir}\\${toolPrefix}size\" \"${OutDir}\\${targetName}.elf\""
-}
+命令:
+
+```ini
+"${exeDir}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
 ```
+
+#### ARMCC 生成 S19 格式的烧录文件
+
+命令:
+
+```ini
+"${CompileToolDir}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
+```
+
