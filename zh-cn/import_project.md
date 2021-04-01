@@ -46,4 +46,4 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
 ![project compiler config](../img/prj_cmp_conf.png)
 
-> 前往 [构建配置](zh-cn/toolchain_and_builder?id=编译配置) 查看文档
+> 前往 [构建配置](zh-cn/builder_config?id=编译选项) 查看文档
