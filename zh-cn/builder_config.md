@@ -32,7 +32,8 @@
   - `关闭`此项，会出现一个**RAM/FLASH布局**选项，你需要打开它为芯片设置储存器的地址大小信息
   
     ![](../img/build_nouse_custom_lds.png)
-  
+
+
 #### AC5/AC6 (ARMCC) 工具链
 
 ?>略
