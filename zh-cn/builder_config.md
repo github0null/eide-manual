@@ -46,9 +46,37 @@
 
 ***
 
-## 附加用户命令到构建流程
+### RISC-V 工程
 
-**编译器选项**->**User Task**  可用于扩展编译流程，其中：
+RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
+
+![](../img/riscv_builder_options.png)
+
+- `arch` **字段**: 
+  
+  含义：对应 `-march=` 选项，用于指定 **目标处理器的指令集**
+
+  默认值：`rv32imac`
+
+- `abi` **字段**:
+  
+  含义：对应 `-mabi=` 选项，用于指定 **整数和浮点调用约定 (integer and floating-point calling convention)**
+
+  默认值：`ilp32`
+
+- `code-model` **字段**:
+  
+  含义：对应 `-mcmodel=` 选项，用于指定 **代码模型 (code model)**
+
+  默认值：`medlow`
+
+***
+
+## 用户命令
+
+> eide 支持在 **编译前** 和 **编译完成后** 附加一些自定义的用户命令，方便进行其他操作
+
+打开 **编译器选项**->**User Task** 其中：
 
   - `Prebuild Task` 代表**构建开始前**要执行的操作
 

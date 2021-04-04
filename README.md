@@ -3,7 +3,9 @@
 
 ***
 
-[Embedded IDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是 vscode 上的一个用于开发 8051/STM8/Cortex-M 的开发工具。用于在 vscode 上实现单片机的开发，编译，烧录功能
+[Embedded IDE](https://marketplace.visualstudio.com/items?itemName=CL.eide) 是一款适用于 8051/STM8/Cortex-M/RISC-V 的单片机开发环境。
+
+能够在 vscode 上提供 **8051**, **STM8**, **Cortex-M**, **RISC-V** 项目的 开发, 编译, 烧录 功能。
 
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 

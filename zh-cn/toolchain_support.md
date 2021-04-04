@@ -1,12 +1,12 @@
 # 支持的编译工具
 
-> eide 支持 5 种编译工具，如下：
+> eide 支持以下几种编译器
 
 ## 8051 工程
 
 - ### Keil_C51 工具链
 
-  介绍：使用 KEIL C51 内置的编译工具进行编译
+  使用 KEIL C51 内置的编译工具进行编译
 
   > 适用项目: 8051 项目
 
@@ -16,7 +16,7 @@
 
 - ### SDCC (Small Device C Compiler) 工具链
 
-  介绍：使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
+  使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
 
   > 适用项目: 8051, STM8, Z80 ... 项目
   >
@@ -30,7 +30,7 @@
 
 - ### IAR-STM8 工具链
 
-  介绍：使用 IAR-STM8 自带的编译工具 iccstm8 进行编译
+  使用 IAR-STM8 自带的编译工具 iccstm8 进行编译
 
   > 适用项目: STM8 项目
 
@@ -38,7 +38,7 @@
 
 - ### SDCC (Small Device C Compiler) 工具链
 
-  介绍：使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
+  使用免费的编译工具 [Small Device C Compiler](http://sdcc.sourceforge.net/) 进行编译
 
   > 适用项目: 8051, STM8, Z80 ... 项目
   >
@@ -52,7 +52,7 @@
 
 - ### AC5/AC6 (ARMCC) 工具链
 
-  介绍：使用 Keil-MDK 自带的编译工具 ARMCC 进行编译
+  使用 Keil-MDK 自带的编译工具 ARMCC 进行编译
 
   > 适用项目: Cortex-M 项目
 
@@ -62,8 +62,34 @@
 
 - ### ARM-GCC (GNU Arm Embedded Toolchain) 工具链
 
-  介绍：使用免费的编译工具 [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) 进行编译
+  使用免费的编译工具 [GNU Arm Embedded Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) 进行编译
+
+  - 相关插件设置：
+
+    `EIDE.ARM.GCC.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\arm-gcc\8 2019-q3-update`
+
+    `EIDE.ARM.GCC.Prefix`: GCC 工具链前缀，默认：`arm-none-eabi-`
 
   > 适用项目: Cortex-M 项目
 
   > 建议使用 `8-2019-q3` 版本, 快捷下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7
+
+***
+
+## **RISC-V 工程**
+
+- ### GCC 工具链
+  
+  对于 RISC-V 工程，eide 支持 GCC 系列的工具链
+
+  - 相关插件设置：
+
+    `EIDE.RISCV.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\xpack-riscv-none-embed-gcc-8.3.0-2.3`
+
+    `EIDE.RISCV.ToolPrefix`: GCC 工具链前缀，默认：`riscv-none-embed-`
+
+  - 推荐工具链：
+
+    `xpack-riscv-none-embed-gcc`: https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases
+
+
