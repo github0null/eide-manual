@@ -56,7 +56,11 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 
 ## STM8 工程
 
-> 烧录 STM8 工程需要先安装 STVP，官方下载地址：https://www.st.com/zh/development-tools/stvp-stm8.html
+> STM8 暂时仅支持 STVP 烧录工具
+
+### 使用 STVP 烧录
+
+> STVP 官方下载地址：https://www.st.com/zh/development-tools/stvp-stm8.html
 > 
 > STVP 精简版下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
@@ -78,31 +82,13 @@ STVP 工具配置界面如图
 
 ***
 
-## 使用自定义命令烧录
-
-> 如果你想使用支持命令行的其他烧录程序，你可以使用 `自定义shell命令` 来进行烧录
-
-首点击切换烧录工具到 Custom, 如下图
-
-![](../img/uploader_cus.png)
-
-之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
-
-命令行中所需要的 `hex/bin 文件路径` 可以由变量 `${programFile}` 或 `${hexFile}` 进行替换, 例如：
-
-```bash
-NuLink.exe -w APROM "${hexFile}"
-```
-
-***
-
 ## ARM 工程
 
 eide 支持主流的 4 种烧录工具
 
 ![](./../img/flasher_list.png)
 
-### 使用 JLink 烧录程序
+### 使用 JLink 烧录
 
 > 要使用 JLink, 必须先安装 JLink 软件，并且 JLink 软件的版本必须在 V6.50 及以上
 > 
@@ -120,7 +106,7 @@ eide 支持主流的 4 种烧录工具
 
 ![](../img/jlink_flash_conf.png)
 
-### 使用 STLink 烧录程序
+### 使用 STLink 烧录
 
 > 要使用 STLink, 必须先安装 STLink Utility 软件
 > 
@@ -140,7 +126,7 @@ eide 支持主流的 4 种烧录工具
 
 ![](../img/stlink_flasher_conf.png)
 
-### 使用 pyocd 烧录程序
+### 使用 pyocd 烧录
 
 > 注意：pyocd 需要 python3 支持，必须先安装 python3
 >
@@ -180,7 +166,7 @@ eide 支持主流的 4 种烧录工具
 
 ***
 
-### 使用 OpenOCD 烧录程序
+### 使用 OpenOCD 烧录
 
 > OpenOCD-v0.10.0 下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
@@ -190,11 +176,57 @@ eide 支持主流的 4 种烧录工具
 
 2. 将烧录配置切换到 OpenOCD，设置 `target` 和 `interface`。
 
- !> **注意：** eide 将从 <OpenOCD安装目录>/scripts/target 和 <OpenOCD安装目录>/scripts/interface 目录读取配置文件列表，**如果 openOCD.exe 路径是无效的，可选的列表将为空**
-
  ![](https://img-blog.csdnimg.cn/20200714121238782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
 3. 点击下载按钮完成下载
 
  ![](https://img-blog.csdnimg.cn/20200714121616638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
+
+#### 注意事项：
+
+- 插件将从以下目录中搜索可用的 cfg 配置文件
+
+  - **当前工作区内：**
+
+    `.`
+
+    `.eide`
+
+    `tools`
+
+  - **OpenOCD安装目录内：**
+
+    `scripts`
+
+    `share/openocd/scripts`
+
+***
+
+## **自定义烧录命令**
+
+> 如果你想使用支持命令行的其他烧录程序，你可以使用 `自定义shell命令` 来进行烧录
+
+### 用法
+
+首点击切换烧录工具到 Custom, 如下图
+
+![](../img/uploader_cus.png)
+
+之后修改 `命令行` 属性，填写你要使用的烧录工具的相应的命令即可
+
+命令行支持一些变量，如下：
+
+- `${programFile}`：代指 `hex/bin 文件路径`
+
+- `${port}`：代指 `可用的串口`
+
+命令行示例：
+
+```bash
+# 使用 NuLink 烧录
+NuLink.exe -w APROM "${hexFile}"
+
+# 使用 stcflash 烧录 8051
+python ./tools/stcflash.py -p ${port} "${hexFile}"
+```
