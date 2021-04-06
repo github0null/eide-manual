@@ -122,3 +122,11 @@ RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
 "${CompileToolDir}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
 ```
 
+#### 打印 GCC 版本
+
+命令:
+
+```ini
+"${CompileToolDir}/${toolPrefix}gcc" -v
+```
+
