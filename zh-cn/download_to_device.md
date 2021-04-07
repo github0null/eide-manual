@@ -236,5 +236,5 @@ python ./tools/stcflash.py -p ${port} "${hexFile}"
 STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${hexFile}" -v --go
 
 # 使用 STM32CubeProgramer + STLink 并通过外部加载算法烧录程序到 STM32H750 片外 QSPI Flash
-STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst -el ./STM32H7xx_W25Q128_WeAct.stldr -e 0 --download "${hexFile}" -v --go
+STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst -el ./STM32H7xx_W25Q128_WeAct.stldr --download "${hexFile}" -v --go
 ```
