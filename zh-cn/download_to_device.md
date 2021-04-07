@@ -219,7 +219,7 @@ eide 支持主流的 4 种烧录工具
 
 命令行支持一些变量，如下：
 
-- `${programFile}`：代指 `hex/bin 文件路径`
+- `${programFile}, ${hexFile}, ${binFile}`：代指 `hex/bin 文件路径`
 
 - `${port}`：代指 `可用的串口`
 
