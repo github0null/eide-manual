@@ -223,16 +223,18 @@ eide 支持主流的 4 种烧录工具
 
 - `${port}`：代指 `可用的串口`
 
-命令行示例：
+### 示例：
+
+> 提示：示例命令中的烧录软件可执行文件路径已设置到环境变量中
 
 ```bash
-# 使用 NuLink 烧录
-NuLink.exe -w APROM "${hexFile}"
+# 使用 NuLink 烧录新唐 mcu
+NuLink -w APROM "${hexFile}"
 
 # 使用 stcflash 烧录 8051
 python ./tools/stcflash.py -p ${port} "${hexFile}"
 
-# 使用 STM32CubeProgramer + STLink 烧录程序
+# 使用 STM32CubeProgramer + STLink 烧录程序到 STM32
 STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${hexFile}" -v --go
 
 # 使用 STM32CubeProgramer + STLink 并通过外部加载算法烧录程序到 STM32H750 片外 QSPI Flash
