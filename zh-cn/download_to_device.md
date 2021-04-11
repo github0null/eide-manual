@@ -211,7 +211,7 @@ eide 支持主流的 4 种烧录工具
 
 ### 用法
 
-首点击切换烧录工具到 Custom, 如下图
+首点击切换烧录工具到 Shell, 如下图
 
 ![](../img/uploader_cus.png)
 
