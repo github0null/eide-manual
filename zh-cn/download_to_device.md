@@ -46,7 +46,7 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 
 - 之后修改 `命令行` 属性，填写 stcflash 的烧录命令, 示例命令如下：
   
-  `python ./tools/stcflash.py -p COM23 "${hexFile}"`
+  `python ./tools/stcflash.py -p ${port} "${hexFile}"`
 
 - 点击下载按钮，开始烧录
 
