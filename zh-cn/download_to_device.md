@@ -46,7 +46,7 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 
   ![](../img/uploader_cus.png)
 
-- 之后修改 `命令行` 属性，填写 stcflash 的烧录命令, 示例命令如下：
+- 之后修改 `命令行` 属性，填写 stcflash 的烧录命令, 示例命令如下 (详见：[自定义命令烧录](zh-cn/download_to_device?id=自定义烧录命令))：
   
   `python ./tools/stcflash.py -p ${port} "${hexFile}"`
 
