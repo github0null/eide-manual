@@ -84,19 +84,20 @@ RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
 
 ![](./../img/builder_user_task.png)
 
-命令中可用的 **路径变量**, 变量名不区分大小写：
+### 命令变量
 
->变量名：\${targetName}，含义：项目名称；
->
->变量名：\${exeDir}，含义：eide 内置构建工具所在目录；
->
->变量名：\${ToolDir}，含义： 编译工具链根目录；
->
->变量名：\${OutDir}，含义：项目输出目录；
->
->变量名：\${CompileToolDir}，含义：编译工具所在目录；
->
->变量名：\${toolPrefix}, 含义：GCC 工具链前缀，如: arm-none-eabi-
+命令中可用的 **变量**, 变量名**不区分**大小写：
+
+|变量名|含义|
+|:----|:----|
+|`${targetName}`|项目名称| 
+|`${ProjectRoot}`|项目根目录|
+|`${OutDir}`|编译输出目录|
+|`${BuilderFolder}`|eide 内置构建工具所在目录|
+|`${ToolchainRoot}`|编译器根目录|
+|`${CompilerPrefix}`|GCC 编译器前缀, 例如: arm-none-eabi-|
+|`${CompilerFolder}`|编译器可执行文件所在目录|
+
 
 示例，加入以下命令到 Post-build Task：`cd "${OutDir}" && del *._*`，含义：在编译结束后删除输出目录下所有匹配 `*._*` 的文件
 
@@ -111,7 +112,7 @@ RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
 命令:
 
 ```ini
-"${exeDir}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
+"${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
 ```
 
 #### ARMCC 生成 S19 格式的烧录文件
@@ -119,7 +120,7 @@ RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
 命令:
 
 ```ini
-"${CompileToolDir}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
+"${CompilerFolder}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
 ```
 
 #### 打印 GCC 版本
@@ -127,6 +128,6 @@ RISC-V 有一些比较重要的选项字段，需要根据情况设置, 如下
 命令:
 
 ```ini
-"${CompileToolDir}/${toolPrefix}gcc" -v
+"${CompilerFolder}/${toolPrefix}gcc" -v
 ```
 
