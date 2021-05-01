@@ -4,9 +4,9 @@
 
 `系统要求`：Windows 7 及以上
 
-`.NET环境`：.NET FrameWork 3.5 (**v2.5.4 以上版本支持.net4**)
+`.NET环境`：.NET FrameWork 3.5 **(v2.5.4 以上版本支持 .NET FrameWork 4)**
 
-> 提示：.NET FrameWork 4 及以上可能不兼容 .NET FrameWork 3 的程序。 如果构建工具无法启动，可能需要单独安装一下 .NET FrameWork 3.5 (**v2.5.4 以上版本会自动选择合适的环境，因此可以忽略该提示**)
+> 提示：.NET FrameWork 4 及以上可能不兼容 .NET FrameWork 3 的程序。 如果构建工具无法启动，可能需要单独安装一下 .NET FrameWork 3.5 **(v2.5.4 以上版本会自动选择合适的.NET环境，因此可以忽略此提示)**
 
 ## 设置编译工具路径
 
