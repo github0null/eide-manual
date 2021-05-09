@@ -2,6 +2,22 @@
 
 > 点击 <img width="16px" bor src="../img/build.svg"> 按钮开始编译
 
+## 工具栏
+
+> 这里有几个常用的工具按钮：**编译**，**清理**，**重新编译**，**烧录**，它们的含义如下
+> 
+> ![](../img/prj_toolbar.png)
+
+- **编译 <img width="16px" bor src="../img/build.svg">**: 增量构建，只编译更改过的文件
+  
+- **清理 <img width="16px" bor src="../img/clean.svg">**: 删除 `build` 目录下的所有内容
+  
+- **重新编译 <img width="16px" bor src="../img/rebuild.svg">**: 重新编译整个项目
+
+- **烧录 <img width="16px" bor src="../img/download.svg">**: 执行烧录命令，将程序烧录到芯片
+
+***
+
 ## 操作展示
 
 ### C51 项目

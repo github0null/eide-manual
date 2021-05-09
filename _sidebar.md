@@ -8,7 +8,7 @@
   - [新建项目](zh-cn/create_project.md)
   - [打开项目](zh-cn/open_project.md)
   - [构建配置](zh-cn/builder_config.md)
-  - [构建项目](zh-cn/build_project.md)
+  - [编译项目](zh-cn/build_project.md)
   - [烧录程序](zh-cn/download_to_device.md)
   - [调试程序](zh-cn/debug_project.md)
 - **项目管理**
