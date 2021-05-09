@@ -54,6 +54,9 @@
 <body>
 
   <div id="app"></div>
+  
+  <!-- edit on github-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
 
   <script>
     window.$docsify = {
@@ -62,6 +65,18 @@
       name: 'EIDE Manual',
       repo: 'https://github.com/github0null/eide/',
       coverpage: true,
+
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/github0null/eide-manual/tree/master/', null, 
+          function(file) {
+            if (file.indexOf('zh-cn/') != -1) {
+              return '在 Github 上编辑'
+            } else {
+              return 'Edit on Github'
+            }
+          })
+      ],
 
       loadSidebar: true,
       maxLevel: 4,
@@ -72,7 +87,7 @@
       maxAge: 600000, // Expiration time, 10 min
 
       // topMargin: 90, // default: 0
-      topMargin: 20,
+      topMargin: 10,
 
       formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}'
     }
