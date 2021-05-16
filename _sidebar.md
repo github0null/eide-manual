@@ -21,7 +21,7 @@
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **经验教训**
   - [SDCC的使用](zh-cn/sdcc.md)
-  - [常见问题](zh-cn/Q&A.md)
+  - [常见问题](https://discuss.em-ide.com/t/FAQ)
 - **问题反馈**
   - [反馈渠道](zh-cn/issue_report.md)
   - [请我喝咖啡☕](zh-cn/coffee.md)
