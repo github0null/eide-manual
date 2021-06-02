@@ -33,6 +33,8 @@
   
     ![](../img/build_nouse_custom_lds.png)
 
+    ![](../img/armcc_ram_rom_layout.png)
+
 
 #### AC5/AC6 (ARMCC) 工具链
 
