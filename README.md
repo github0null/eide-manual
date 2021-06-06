@@ -9,7 +9,7 @@
 
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 
-> **文档内资源下载地址：https://cloud.github0null.io/s/R4SY**
+> **相关编译工具及资源下载：https://cloud.github0null.io/s/R4SY**
 
 > QQ 交流群：860375447
 
