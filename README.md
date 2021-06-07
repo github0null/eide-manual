@@ -7,6 +7,8 @@
 
 能够在 vscode 上提供 **8051**, **STM8**, **Cortex-M**, **RISC-V** 项目的 开发, 编译, 烧录 功能。
 
+> Embedded IDE 插件主页：https://marketplace.visualstudio.com/items?itemName=CL.eide
+
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 
 > **相关编译工具及资源下载：https://cloud.github0null.io/s/R4SY**
