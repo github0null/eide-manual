@@ -40,7 +40,7 @@
 
 ***
 
-#### ARM-GCC 工具链
+#### ARM-GCC 工程
 
 ![](../img/build_conf_gcc.png)
 
