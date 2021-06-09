@@ -8,7 +8,7 @@
 
  - [keil 官网](https://www.keil.com/dd2/pack)
 
- - [eide 共享文件夹](https://cloud.em-ide.com/s/R4SY?path=%2FKEIL%20%E5%8C%85)
+ - [eide 共享文件夹](https://cloud.github0null.io/s/R4SY?path=%2FKEIL%20%E5%8C%85)
 
 ## 安装
 

@@ -82,7 +82,7 @@ eide 支持使用多种编译工具来编译项目
 
   > 适用项目: Cortex-M 项目
 
-  > 建议使用 `8-2019-q3` 版本, 快捷下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7
+  > 建议使用 `8-2019-q3` 版本, 快捷下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7
 
 ***
 

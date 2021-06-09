@@ -38,7 +38,7 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 > 
 > 2. 安装 **pyserial** 模块, 命令：`pip3 install pyserial --user`
 > 
-> 3. 下载 [stcflash.py](https://github.com/sms-wyt/stcflash/blob/master/stcflash.py), **并复制到项目的目录下**，快捷下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
+> 3. 下载 [stcflash.py](https://github.com/sms-wyt/stcflash/blob/master/stcflash.py), **并复制到项目的目录下**，快捷下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
 #### 用法
 
@@ -66,7 +66,7 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 
 > STVP 官方下载地址：https://www.st.com/zh/development-tools/stvp-stm8.html
 > 
-> STVP 精简版下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
+> STVP 精简版下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
 安装完成之后需要在 eide 插件设置中设置 `STVP_CmdLine.exe` 的绝对路径
 
@@ -116,7 +116,7 @@ eide 支持主流的 4 种烧录工具
 > 
 > STLink Utility 官方下载地址：https://www.st.com/zh/development-tools/stsw-link004.html
 >
-> 共享下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
+> 共享下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
 安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.StlinkExePath`
 
@@ -158,7 +158,7 @@ eide 支持主流的 4 种烧录工具
 
      ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
-   - 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://cloud.em-ide.com/s/R4SY?path=%2Fpyocd%20%E8%8A%AF%E7%89%87%E5%8C%85)**
+   - 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://cloud.github0null.io/s/R4SY?path=%2Fpyocd%20%E8%8A%AF%E7%89%87%E5%8C%85)**
 
      提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)**
 
@@ -172,7 +172,7 @@ eide 支持主流的 4 种烧录工具
 
 ### 使用 OpenOCD 烧录
 
-> OpenOCD-v0.10.0 下载地址：https://cloud.em-ide.com/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
+> OpenOCD-v0.10.0 下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
 1. 打开设置搜索：`EIDE.ARM.OpenOCD.ExePath`, 设置好 OpenOCD.exe 的路径
 
