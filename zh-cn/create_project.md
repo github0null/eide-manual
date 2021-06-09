@@ -12,15 +12,11 @@
 
 ![演示](../img/quick_start.gif)
 
-1. 打开 Operation 栏，点击 `新建项目`, 选择 `Get Template From Disk or Github ...` 项
+1. 打开 Operation 栏，点击 `新建项目`, 选择 `从远程仓库获取` 
 
  ![](../img/op_new_prj_sel.png)
 
- 然后选择从 `磁盘` 或者 [Github 模板仓库](https://github.com/github0null/eide-doc) 创建获取模板.
-
- ![](../img/op_new_prj_tmp_online.png)
-
- 如果选择从 Github 获取模板，eide 会从默认仓库拉取模板信息，然后弹出对话框让你选择模板，然后完成创建
+ 接下来 eide 会从默认仓库拉取模板信息，然后弹出对话框让你选择模板，然后完成创建
 
  > 提示：你可以在插件设置中配置自己的模板仓库位置，默认使用作者提供的仓库，也欢迎大家将自己的模板通过 PR 分享到默认仓库
 
@@ -28,7 +24,7 @@
 
 2. 打开创建好的项目，开始进行一些项目的配置
 
-3. 如果模板使用了 CMSIS 包（如果没有，可跳过此步骤），你需要先修改你**要使用的芯片型号**
+3. 如果模板使用了 CMSIS 包（**如果没有，可跳过此步骤**），你需要先修改你**要使用的芯片型号**
 
  ![](https://img-blog.csdnimg.cn/2020063000331436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
 
@@ -42,7 +38,7 @@
 
 > 如果没有网络，导致无法从 Github 模板创建，eide 也提供了一些内置的模板，但十分有限
 
-打开 Operation 栏，点击 `新建项目`, 选择 `Create Project By Internal Template` 项
+打开 Operation 栏，点击 `新建项目`, 选择 `内置项目模板` 选项
 
 ![](../img/op_new_prj_sel.png)
 
@@ -58,11 +54,11 @@ eide 会弹出对话框让你选择 `项目模板`，然后根据你选择的模
 
 ### 1. 创建一个空的项目
 
- 打开 Operation 栏，点击 `新建项目`, 选择 `Create Empty Project` 项
+ 打开 Operation 栏，点击 `新建项目`, 选择 `空项目` 选项
 
  ![](../img/op_new_prj_sel.png)
 
- eide 会弹出对话框让你选择 `项目类型`，此处要创建 stm32 项目，应该选择 `Empty Cortex-M Project`
+ eide 会弹出对话框让你选择 `项目类型`，此处要创建 stm32 项目，应该选择 `Cortex-M 项目`
 
  ![](../img/op_new_prj_emp.png)
 
