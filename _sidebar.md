@@ -3,7 +3,6 @@
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
 - **开始使用**
   - [准备工作](zh-cn/prepare_work.md)
-  - [编译工具](zh-cn/toolchain_support.md)
   - [导入项目](zh-cn/import_project.md)
   - [新建项目](zh-cn/create_project.md)
   - [打开项目](zh-cn/open_project.md)
@@ -14,6 +13,7 @@
 - **项目管理**
   - [项目资源管理器](zh-cn/project_manager.md)
   - [芯片支持包](zh-cn/chip_support_pack.md)
+  - [编译工具](zh-cn/toolchain_support.md)
   - [多目标项目](zh-cn/project_targets.md)
   - [导出项目](zh-cn/export_project.md)
   - [常用功能](zh-cn/other_functions.md)

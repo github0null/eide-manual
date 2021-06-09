@@ -1,8 +1,14 @@
-# 支持的编译工具
+# 编译工具
 
-> eide 支持以下几种编译器
+eide 支持使用多种编译工具来编译项目
+
+通过点击构建配置的**切换**按钮即可完成切换，如下图所示
+
+![](../img/switch_compiler.png)
 
 ## 8051 工程
+
+对于 8051 工程，支持 2 种编译器，如下：
 
 - ### Keil_C51 工具链
 
@@ -28,6 +34,8 @@
 
 ## STM8 工程
 
+对于 STM8 工程，支持 2 种编译器，如下：
+
 - ### IAR-STM8 工具链
 
   使用 IAR-STM8 自带的编译工具 iccstm8 进行编译
@@ -48,7 +56,9 @@
 
 ***
 
-## ARM 工程
+## Cortex-M 工程
+
+对于 Cortex-M 工程，支持 2 种编译器，如下：
 
 - ### AC5/AC6 (ARMCC) 工具链
 
@@ -78,18 +88,16 @@
 
 ## **RISC-V 工程**
 
-- ### GCC 工具链
-  
-  对于 RISC-V 工程，eide 支持 GCC 系列的工具链
+对于 RISC-V 工程，eide 支持 GCC 系列的工具链
 
-  - 相关插件设置：
+- 相关插件设置：
 
-    `EIDE.RISCV.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\xpack-riscv-none-embed-gcc-8.3.0-2.3`
+  `EIDE.RISCV.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\xpack-riscv-none-embed-gcc-8.3.0-2.3`
 
-    `EIDE.RISCV.ToolPrefix`: GCC 工具链前缀，默认：`riscv-none-embed-`
+  `EIDE.RISCV.ToolPrefix`: GCC 工具链前缀，默认：`riscv-none-embed-`
 
-  - 推荐工具链：
+- 推荐工具链：
 
-    `xpack-riscv-none-embed-gcc`: https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases
+  `xpack-riscv-none-embed-gcc`: https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases
 
 
