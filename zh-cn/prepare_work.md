@@ -15,8 +15,7 @@
 > 注：如果将编译器安装路径设置为空，插件将在环境变量中搜索编译器位置（ARMCC,KEIL_C51 除外）
 
 **"设置工具链路径"** 选项的图标表明了工具链路径设置的总体状态
- - <img width="16px" bor src="../icon/StatusOK_16x.svg">：所有的工具链已完全设置完毕
- - <img width="16px" bor src="../icon/StatusWarning_16x.svg">：某一个工具链路径是无效的
+ - <img width="16px" bor src="../icon/StatusOK_16x.svg">：某一个工具链已设置完毕
  - <img width="16px" bor src="../icon/StatusCriticalError_16x.svg">：还没有为任何工具链设置安装路径
 
 ![](../img/toolchain_status.png)

@@ -16,6 +16,7 @@
   - [编译工具](zh-cn/toolchain_support.md)
   - [多目标项目](zh-cn/project_targets.md)
   - [导出项目](zh-cn/export_project.md)
+  - [生成 Makefile](zh-cn/export_makefile.md)
   - [常用功能](zh-cn/other_functions.md)
 - **内置工具**
   - [串口监视器](zh-cn/serialport_monitor.md)
