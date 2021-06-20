@@ -98,7 +98,7 @@ eide 支持主流的 4 种烧录工具
 > 
 > JLink_V650 下载地址：https://www.segger.com/downloads/jlink/JLink_Windows_V650.exe
 
-安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.JLink.ToolDirectory`
+安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.JLink.InstallDirectory`
 
 搜索到 JLink 设置后，将 JLink 安装目录位置填写到输入框内即可完成 JLink 路径设置
 
@@ -118,7 +118,7 @@ eide 支持主流的 4 种烧录工具
 >
 > 共享下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
-安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.ARM.StlinkExePath`
+安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.STLink.ExePath`
 
 搜索到 STLink 设置后，**在 STLink Utility 安装目录中找到 `STLink_CLI.exe` 的位置**，并将其填写到输入框内即可完成 STLink 路径设置
 
@@ -174,7 +174,7 @@ eide 支持主流的 4 种烧录工具
 
 > OpenOCD-v0.10.0 下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
 
-1. 打开设置搜索：`EIDE.ARM.OpenOCD.ExePath`, 设置好 OpenOCD.exe 的路径
+1. 打开设置搜索：`EIDE.OpenOCD.ExePath`, 设置好 OpenOCD.exe 的路径
 
  ![](../img/openocd_conf.png)
 
