@@ -221,7 +221,7 @@ eide 支持主流的 4 种烧录工具
 
 命令行支持一些变量，如下：
 
-- `${programFile}, ${hexFile}, ${binFile}`：代指 `hex/bin 文件路径`
+- `${programFile}`：代指程序文件路径，例如：.hex, .bin, .s19
 
 - `${port}`：代指 `可用的串口` (**注意：如果有多个串口可用，该值是串口列表的第一个**)
 
@@ -231,14 +231,14 @@ eide 支持主流的 4 种烧录工具
 
 ```bash
 # 使用 NuLink 烧录新唐 mcu
-NuLink -w APROM "${hexFile}"
+NuLink -w APROM "${programFile}"
 
 # 使用 stcflash 烧录 8051
-python ./tools/stcflash.py -p ${port} "${hexFile}"
+python ./tools/stcflash.py -p ${port} "${programFile}"
 
 # 使用 STM32CubeProgramer + STLink 烧录程序到 STM32
-STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${hexFile}" -v --go
+STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst --download "${programFile}" -v --go
 
 # 使用 STM32CubeProgramer + STLink 并通过外部加载算法烧录程序到 STM32H750 片外 QSPI Flash
-STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst -el ./STM32H7xx_W25Q128_WeAct.stldr --download "${hexFile}" -v --go
+STM32_Programmer_CLI -c port=SWD FREQ=4000 mode=NORMAL reset=SWrst -el ./STM32H7xx_W25Q128_WeAct.stldr --download "${programFile}" -v --go
 ```
