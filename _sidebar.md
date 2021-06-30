@@ -11,6 +11,7 @@
   - [编译项目](zh-cn/build_project.md)
   - [烧录程序](zh-cn/download_to_device.md)
   - [调试程序](zh-cn/debug_project.md)
+  - [常用功能](zh-cn/other_functions.md)
 - **项目管理**
   - [项目资源管理器](zh-cn/project_manager.md)
   - [芯片支持包](zh-cn/chip_support_pack.md)
@@ -18,7 +19,6 @@
   - [多目标项目](zh-cn/project_targets.md)
   - [导出项目](zh-cn/export_project.md)
   - [生成 Makefile](zh-cn/export_makefile.md)
-  - [常用功能](zh-cn/other_functions.md)
 - **内置工具**
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **经验教训**
