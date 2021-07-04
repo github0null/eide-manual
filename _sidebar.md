@@ -19,6 +19,7 @@
   - [多目标项目](zh-cn/project_targets.md)
   - [导出项目](zh-cn/export_project.md)
   - [生成 Makefile](zh-cn/export_makefile.md)
+  - [项目静态检查](zh-cn/cppcheck.md)
 - **内置工具**
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **经验教训**
