@@ -76,7 +76,7 @@ eide 支持使用多种编译工具来编译项目
 
   - 相关插件设置：
 
-    `EIDE.ARM.GCC.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\arm-gcc\8 2019-q3-update`
+    `EIDE.ARM.GCC.InstallDirectory`: GCC 工具链安装目录位置
 
     `EIDE.ARM.GCC.Prefix`: GCC 工具链前缀，默认：`arm-none-eabi-`
 
@@ -92,7 +92,7 @@ eide 支持使用多种编译工具来编译项目
 
 - 相关插件设置：
 
-  `EIDE.RISCV.InstallDirectory`: GCC 工具链安装目录位置，默认：`D:\xpack-riscv-none-embed-gcc-8.3.0-2.3`
+  `EIDE.RISCV.InstallDirectory`: GCC 工具链安装目录位置
 
   `EIDE.RISCV.ToolPrefix`: GCC 工具链前缀，默认：`riscv-none-embed-`
 

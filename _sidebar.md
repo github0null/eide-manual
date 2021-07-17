@@ -13,7 +13,7 @@
   - [调试程序](zh-cn/debug_project.md)
   - [常用功能](zh-cn/other_functions.md)
 - **项目管理**
-  - [项目资源管理器](zh-cn/project_manager.md)
+  - [资源管理器](zh-cn/project_manager.md)
   - [芯片支持包](zh-cn/chip_support_pack.md)
   - [编译工具](zh-cn/toolchain_support.md)
   - [多目标项目](zh-cn/project_targets.md)
