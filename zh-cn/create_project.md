@@ -8,7 +8,7 @@
 
 !> 注意：此功能需要联网，请确保网络功能正常
 
-作者正在向[模板仓库](https://github.com/github0null/eide-doc)不断增加新的模板工程，这将会使创建项目更加快捷方便
+作者正在向 [模板仓库](https://github.com/github0null/eide-resource) 不断增加新的模板工程，这将会使创建项目更加快捷方便
 
 ![演示](../img/quick_start.gif)
 
