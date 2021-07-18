@@ -14,7 +14,7 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
   ![select keil file](../img/import_sel_file.png)
 
-3. 选择项目保存位置；选择 **Yes**, eide 项目将和 KEIL 项目处于同一个文件夹下，选择 **No**, 你需要指定一个文件夹用于存放 eide 项目
+3. 选择项目保存位置；选择 **Yes**, eide 项目将与 KEIL 项目**共存于同一个文件夹下**，选择 **No**, 你需要**指定一个新的文件夹用于存放 eide 项目**
 
   ![select save folder](../img/import_sel_save_path.png)
 
