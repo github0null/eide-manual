@@ -119,27 +119,23 @@ RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况
 
 ### 常用命令
 
-#### 通过 HEX 生成 Bin 文件
-
-命令:
+> **这里有一些常用的命令可供参考**
 
 ```ini
-"${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
-```
 
-#### ARMCC 生成 S19 格式的烧录文件
-
-命令:
-
-```ini
-"${CompilerFolder}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
-```
-
-#### 打印 GCC 版本
-
-命令:
-
-```ini
+# 打印 GCC 版本
 "${CompilerFolder}/${toolPrefix}gcc" -v
-```
 
+# ARMCC 生成 S19 格式的烧录文件
+"${CompilerFolder}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
+
+# 从 hex 文件生成 bin 文件
+"${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
+
+# 复制生成的 .hex .bin 文件到 dist 目录
+mkdir .\dist || copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
+
+# 复制生成的 .a 文件到 dist 目录
+mkdir .\dist || copy /B "${OutDir}\${targetName}.a" .\dist\
+
+```
