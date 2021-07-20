@@ -133,9 +133,9 @@ RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况
 "${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
 
 # 复制生成的 .hex .bin 文件到 dist 目录
-mkdir .\dist || copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
+mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
 
 # 复制生成的 .a 文件到 dist 目录
-mkdir .\dist || copy /B "${OutDir}\${targetName}.a" .\dist\
+mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\
 
 ```
