@@ -17,6 +17,7 @@
   - [芯片支持包](zh-cn/chip_support_pack.md)
   - [编译工具](zh-cn/toolchain_support.md)
   - [多目标项目](zh-cn/project_targets.md)
+  - [多项目工作区](zh-cn/multi_prj_workspace.md)
   - [导出项目](zh-cn/export_project.md)
   - [生成 Makefile](zh-cn/export_makefile.md)
   - [项目静态检查](zh-cn/cppcheck.md)
