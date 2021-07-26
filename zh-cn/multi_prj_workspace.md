@@ -37,7 +37,21 @@
                "name": "threadx",
                "path": "threadx"
            }
-       ]
+       ],
+       "tasks": {
+           "version": "2.0.0",
+           "tasks": [
+               {
+                   "label": "clean",
+                   "type": "shell",
+                   "command": [
+                       "Get-ChildItem ../* -Include dist,build -Recurse | rm -Verbose -Recurse -Force"
+                   ],
+                   "group": "build",
+                   "problemMatcher": []
+               }
+           ]
+       }
    }
   ```
 
@@ -76,3 +90,6 @@
   其中 order 的值即为项目的优先级（不设置默认为 0），**其值越小，优先级越高**
 
 - 修改之后保存配置文件，点击 `构建所有项目`，即可按照指定顺序完成构建
+
+
+> 本例使用的示例工程：[threadx_stm32f7xx_demo](https://github.com/github0null/eide-resource/blob/master/eide-template-list/threadx_stm32f7xx_demo.ewt)
