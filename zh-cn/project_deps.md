@@ -49,13 +49,13 @@
 
 **汇编器**宏开关格式：
 
-| 汇编器类型 | 格式（`key`为宏名称，`value` 为宏的值） |
+| 汇编器类型 | 格式（`<key>`为宏名称，`<value>` 为宏的值） |
 |:--|:--|
-| ARMCC 5 | --pd "\<key\> SETA \<value\>" |
-| ARMCC 6（asm-clang） | -D\<key\>=\<value\> |
-| ARM GCC | -D\<key\>=\<value\> |
-| RISCV GCC | -D\<key\>=\<value\> |
-| SDCC | -D\<key\>=\<value\> |
-| IAR STM8 | -D \<key\>=\<value\> |
+| ARMCC 5 | `--pd "<key> SETA <value>"` |
+| ARMCC 6（asm-clang） | `-D<key>=<value>` |
+| ARM GCC | `-D<key>=<value>` |
+| RISCV GCC | `-D<key>=<value>` |
+| SDCC | `-D<key>=<value>` |
+| IAR STM8 | `-D<空格><key>=<value>` |
 
 ***
