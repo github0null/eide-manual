@@ -8,7 +8,7 @@
   - [新建项目](zh-cn/create_project.md)
   - [打开项目](zh-cn/open_project.md)
   - [构建配置](zh-cn/builder_config.md)
-  - [项目依赖](zh-cn/other_functions.md)
+  - [项目依赖](zh-cn/project_deps.md)
   - [编译项目](zh-cn/build_project.md)
   - [烧录程序](zh-cn/download_to_device.md)
   - [调试程序](zh-cn/debug_project.md)
@@ -19,8 +19,8 @@
   - [多目标项目](zh-cn/project_targets.md)
   - [多项目工作区](zh-cn/multi_prj_workspace.md)
   - [导出项目](zh-cn/export_project.md)
-  - [生成 Makefile](zh-cn/export_makefile.md)
   - [项目静态检查](zh-cn/cppcheck.md)
+  - [实用功能](zh-cn/utility_functions.md)
 - **内置工具**
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **经验教训**
