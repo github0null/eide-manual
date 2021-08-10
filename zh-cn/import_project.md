@@ -42,8 +42,12 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
 
 ## 注意事项
 
-导入 KEIL 项目时，KEIL 项目的 **编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置，具体参考上面的步骤 5
+- 导入 KEIL 项目时，KEIL 项目的 **编译选项** 不会一并导入，请在导入完毕后自行在 eide 中完成设置，具体参考上面的步骤 5
 
-![project compiler config](../img/prj_cmp_conf.png)
+  ![project compiler config](../img/prj_cmp_conf.png)
 
-> 前往 [构建配置](zh-cn/builder_config?id=编译选项) 查看文档
+  > 前往 [构建配置](zh-cn/builder_config?id=编译选项) 查看文档
+
+- 某些工程使用了 MDK 的 RTE 组件，如果在导入时无法找到组件的位置，插件会弹出**导入警告**，你需要在导入完成后手动将这些未导入的文件加入到项目，如下图所示：
+
+  ![](../img/import_warning.png)
