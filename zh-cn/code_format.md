@@ -39,11 +39,17 @@ AllowShortIfStatementsOnASingleLine: true
 # 允许短的循环保持在同一行
 AllowShortLoopsOnASingleLine: true
 
+# 允许短的块保持在同一行
+AllowShortBlocksOnASingleLine: true
+
 # 缩进 case 标签
 IndentCaseLabels: true
 
 # 允许排序 #include
 SortIncludes: false
+
+# 对齐宏定义
+# AlignConsecutiveMacros: AcrossEmptyLinesAndComments
 
 ```
 
