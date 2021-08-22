@@ -15,20 +15,21 @@
 - **项目管理**
   - [资源管理器](zh-cn/project_manager.md)
   - [芯片支持包](zh-cn/chip_support_pack.md)
-  - [编译工具](zh-cn/toolchain_support.md)
+  - [编译工具介绍](zh-cn/toolchain_support.md)
   - [多目标项目](zh-cn/project_targets.md)
   - [多项目工作区](zh-cn/multi_prj_workspace.md)
   - [导出项目](zh-cn/export_project.md)
-  - [项目静态检查](zh-cn/cppcheck.md)
   - [实用功能](zh-cn/utility_functions.md)
-- **内置工具**
-  - [串口监视器](zh-cn/serialport_monitor.md)
-- **经验教训**
+- **代码编写**
+  - [调整代码风格](zh-cn/code_format.md)
   - [SDCC的使用](zh-cn/sdcc.md)
-  - [常见问题](https://discuss.em-ide.com/t/FAQ)
-- **相关资料**
+- **其他功能**
+  - [项目静态检查](zh-cn/cppcheck.md)
+  - [串口监视器](zh-cn/serialport_monitor.md)
+- **相关链接**
   - [SDCC手册](http://sdcc.sourceforge.net/doc/sdccman.pdf)
   - [GCC链接脚本](https://sourceware.org/binutils/docs/ld/index.html#SEC_Contents)
+  - [常见问题](https://discuss.em-ide.com/t/FAQ)
 - **问题反馈**
   - [反馈渠道](zh-cn/issue_report.md)
   - [请我喝咖啡☕](zh-cn/coffee.md)
