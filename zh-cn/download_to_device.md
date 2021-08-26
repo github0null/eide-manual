@@ -24,7 +24,7 @@ STC 的下载配置较多，将在配置文件里进行，可以点击下图按�
 
 **"[]" 号**里描述了适用于此配置的芯片型号，例如：**\[ALL\]** 表示适用于所有型号
 
-![](https://img-blog.csdnimg.cn/20200303140748914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20200303140748914.png)
 
 > 注意：stcgal 用法与 STC 官方的烧录工具一样，在面板输出 **Cycling power done** 之后，需要**复位 stc 芯片 或者 关闭然后打开芯片电源**，这样芯片才能检测到 ISP 命令，进入到下载流程
 
@@ -82,7 +82,7 @@ STVP 工具配置界面如图
 
 在修改好配置之后，连接好 STLink，点击下载按钮开始下载
 
-![](https://img-blog.csdnimg.cn/20201204184429743.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+![](https://img-blog.csdnimg.cn/20201204184429743.png)
 
 ***
 
@@ -142,11 +142,11 @@ eide 支持主流的 4 种烧录工具
 
  **解压 usblib 后，将 libusb.dll 复制到 python.exe 所在的目录，注意：所选择的 libusb.dll 必须要和电脑上安装的 python 是同一体系结构，例如：python3_x86 版本对应 MS32 目录下的 dll**
 
- ![](https://img-blog.csdnimg.cn/20200707213346603.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](https://img-blog.csdnimg.cn/20200707213346603.png)
 
 3. 连接 目标板，命令行输入 `pyocd list` 检查 pyocd 是否能够正常工作，如果没有问题则会输出已连接的设备列表
 
- ![](https://img-blog.csdnimg.cn/20200707213951601.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](https://img-blog.csdnimg.cn/20200707213951601.png)
 
 4. 打开 EIDE 项目，配置烧录设置
    
@@ -154,15 +154,15 @@ eide 支持主流的 4 种烧录工具
 
      ![](https://img-blog.csdnimg.cn/20200707214308226.png)
 
-   - 命令行输入 `pyocd list -t`，查看内置支持的芯片，如果上一步填写的芯片名存在，**则可以跳过后续步骤**，否则继续下一步
+   - 命令行输入 `pyocd list -t`，查看 **内置支持** 的芯片，如果上一步填写的芯片名存在，**则可以跳过后续步骤**，否则继续下一步
 
-     ![](https://img-blog.csdnimg.cn/2020070721482367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+     ![](https://img-blog.csdnimg.cn/2020070721482367.png)
 
-   - 打开 config 属性，**配置包含该芯片的 keil 包路径 (如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://cloud.github0null.io/s/R4SY?path=%2Fpyocd%20%E8%8A%AF%E7%89%87%E5%8C%85)**
+   - 打开 config 属性，配置包含该芯片的 keil 包路径（包路径可以使用相对于工作区根目录的**相对路径**），如果完整的 keil 包太大，可以用简化版的, 仓库地址: https://cloud.github0null.io/s/R4SY?path=%2Fpyocd%20%E8%8A%AF%E7%89%87%E5%8C%85
 
-     提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)**
+     提示：此配置文件里也可以填写一些其他的 pyocd 配置选项，具体参考 [pyocd 配置文档](https://github.com/pyocd/pyOCD/tree/master/docs)
 
-     ![](https://img-blog.csdnimg.cn/20200707215417409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+     ![](https://img-blog.csdnimg.cn/20200707215417409.png)
 
 5. 连接目标板，点击下载按钮启动下载
 
@@ -180,11 +180,11 @@ eide 支持主流的 4 种烧录工具
 
 2. 将烧录配置切换到 OpenOCD，设置 `target` 和 `interface`。
 
- ![](https://img-blog.csdnimg.cn/20200714121238782.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](https://img-blog.csdnimg.cn/20200714121238782.png)
 
 3. 点击下载按钮完成下载
 
- ![](https://img-blog.csdnimg.cn/20200714121616638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwODMzODEw,size_16,color_FFFFFF,t_70)
+ ![](https://img-blog.csdnimg.cn/20200714121616638.png)
 
 
 #### 注意事项：
