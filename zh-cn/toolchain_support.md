@@ -20,7 +20,7 @@ eide 支持使用多种编译工具来编译项目
 
   ![](../img/keilc51_ld_and_as.png)
 
-  !> **注意**：使用前必须完全破解 Keil C51，否则在编译项目时会导致**链接失败（ERROR L257 ... 这类错误）**
+  !> **注意**：使用前必须保证编译器已有完全的许可证，或者已破解 Keil C51，否则在编译项目时会导致**链接失败（ERROR L257 ... 这类错误）**
 
 - ### SDCC (Small Device C Compiler) 工具链
 
@@ -36,7 +36,11 @@ eide 支持使用多种编译工具来编译项目
 
 ## STM8 工程
 
-对于 STM8 工程，支持 2 种编译器，如下：
+对于 STM8 工程，支持 2 种编译器：`SDCC` 和 `IAR`
+
+几种 STM8 编译器性能对比（基准测试）：
+
+![](../img/sdcc_pk.jpg)
 
 - ### IAR-STM8 工具链
 
@@ -44,7 +48,7 @@ eide 支持使用多种编译工具来编译项目
 
   > 适用项目: STM8 项目
 
-  !> **注意**：使用前必须完全破解 IAR-STM8
+  !> **注意**：使用前必须保证编译器已有完全的许可证，或者已破解 IAR-STM8
 
 - ### SDCC (Small Device C Compiler) 工具链
 
@@ -60,7 +64,11 @@ eide 支持使用多种编译工具来编译项目
 
 ## Cortex-M 工程
 
-对于 Cortex-M 工程，支持 2 种编译器，如下：
+对于 Cortex-M 工程，支持 2 种编译器：`Armcc 系列` 和 `GNU Arm Embedded Toolchain`
+
+几种 Arm 编译器性能对比（摘自 Arm keil 官网）：
+
+![](../img/arm_toolchain_pk.png)
 
 - ### AC5/AC6 (ARMCC) 工具链
 
@@ -70,7 +78,7 @@ eide 支持使用多种编译工具来编译项目
 
   > 提示：AC5 是指 ARMCC 版本 5 的编译工具;  AC6 是指 ARMCC 版本 6 的编译工具
 
-  !> **注意**：使用前必须完全破解 Keil-MDK
+  !> **注意**：使用前必须保证编译器已有完全的许可证，或者已破解
 
 - ### ARM-GCC (GNU Arm Embedded Toolchain) 工具链
 
