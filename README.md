@@ -11,8 +11,6 @@
 
 > Embedded IDE 论坛地址: https://discuss.em-ide.com
 
-> Embedded IDE 预览版下载: https://cloud.github0null.io/s/R4SY?path=%2Feide%20%E6%B5%8B%E8%AF%95%E7%89%88
-
 > 相关编译工具及资源下载：https://cloud.github0null.io/s/R4SY
 
 > QQ 交流群：860375447
