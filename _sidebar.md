@@ -1,6 +1,7 @@
 - **简述**
   - [简介](README.md)
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
+  - [Vsix快照](https://cloud.github0null.io/s/1oCE)
 - **开始使用**
   - [安装](zh-cn/install.md)
   - [准备工作](zh-cn/prepare_work.md)
