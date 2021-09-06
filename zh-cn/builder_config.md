@@ -123,6 +123,9 @@ RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况
 
 ```ini
 
+# 查看内部的环境变量
+powershell -Command ls env:
+
 # 打印 GCC 版本
 "${CompilerFolder}/${toolPrefix}gcc" -v
 
