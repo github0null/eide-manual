@@ -49,7 +49,7 @@ IndentCaseLabels: true
 SortIncludes: false
 
 # 对齐宏定义
-# AlignConsecutiveMacros: AcrossEmptyLinesAndComments
+# AlignConsecutiveMacros: AcrossEmptyLines
 
 ```
 
