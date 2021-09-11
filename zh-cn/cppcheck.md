@@ -4,8 +4,6 @@
 
 ## 安装
 
-!> 注意：若要手动下载安装，必须使用 [eide-resource](https://github.com/github0null/eide-resource/tree/master/packages) 仓库中的 cppcheck.7z 安装包，否则将缺失相关的配置文件 
-
 右键项目，在菜单中选择 `使用 Cppcheck 检查项目`，如果没有发现 cppcheck 可执行文件，则会弹出提示，点击 `立即安装`
 
 ![](../img/cppcheck_install.png)
@@ -13,6 +11,8 @@
 安装完毕后，会弹出提示
 
 ![](../img/cppcheck_ints_done.png)
+
+!> 注意：若要手动下载安装，必须使用 [eide-resource](https://github.com/github0null/eide-resource/tree/master/packages) 仓库中的 cppcheck.7z 安装包，否则将缺失相关的配置文件 
 
 ***
 
