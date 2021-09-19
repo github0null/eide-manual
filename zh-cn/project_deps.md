@@ -53,11 +53,11 @@
 
 | 汇编器类型 | 格式（`<key>`为宏名称，`<value>` 为宏的值） |
 |:--|:--|
-| ARMCC 5 | `--pd "<key> SETA <value>"` |
-| ARMCC 6（asm-clang） | `-D<key>=<value>` |
-| ARM GCC | `-D<key>=<value>` |
-| RISCV GCC | `-D<key>=<value>` |
-| SDCC | `-D<key>=<value>` |
-| IAR STM8 | `-D<空格><key>=<value>` |
+| ARMCC 5 | `"<key> SETA <value>"` |
+| ARMCC 6（asm-clang） | `<key>=<value>` |
+| ARM GCC | `<key>=<value>` |
+| RISCV GCC | `<key>=<value>` |
+| SDCC | `<key>=<value>` |
+| IAR STM8 | `<key>=<value>` |
 
 ***
