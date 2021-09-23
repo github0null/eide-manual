@@ -53,7 +53,7 @@
 
 | 汇编器类型 | 格式（`<key>`为宏名称，`<value>` 为宏的值） |
 |:--|:--|
-| ARMCC 5 | `"<key> SETA <value>"` |
+| ARMCC 5/6 | `"<key> SETA <value>"` |
 | ARMCC 6（asm-clang） | `<key>=<value>` |
 | ARM GCC | `<key>=<value>` |
 | RISCV GCC | `<key>=<value>` |
