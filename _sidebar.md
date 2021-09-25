@@ -30,6 +30,7 @@
 - **相关链接**
   - [SDCC手册](http://sdcc.sourceforge.net/doc/sdccman.pdf)
   - [GCC链接脚本](https://sourceware.org/binutils/docs/ld/index.html#SEC_Contents)
+  - [JLink命令手册](https://wiki.segger.com/J-Link_Commander)
   - [常见问题](https://discuss.em-ide.com/t/FAQ)
 - **问题反馈**
   - [反馈渠道](zh-cn/issue_report.md)
