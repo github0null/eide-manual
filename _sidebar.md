@@ -1,7 +1,10 @@
 - **简述**
   - [简介](README.md)
+  - [插件主页](https://marketplace.visualstudio.com/items?itemName=CL.eide)
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
-  - [**Vsix快照**](https://cloud.github0null.io/s/1oCE)
+  - [**论坛社区**](https://discuss.em-ide.com)
+  - [**VSIX快照**](https://cloud.github0null.io/s/1oCE)
+  - [资源下载](https://cloud.github0null.io/s/R4SY)
 - **开始使用**
   - [安装](zh-cn/install.md)
   - [准备工作](zh-cn/prepare_work.md)

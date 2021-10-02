@@ -5,6 +5,3 @@
 - **论坛**：https://discuss.em-ide.com
 
 - **Github Issue**：https://github.com/github0null/eide/issues
-
-- **QQ交流群**：860375447
-
