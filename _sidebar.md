@@ -4,7 +4,6 @@
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
   - [**论坛社区**](https://discuss.em-ide.com)
   - [**VSIX快照**](https://cloud.github0null.io/s/1oCE)
-  - [资源下载](https://cloud.github0null.io/s/R4SY)
 - **开始使用**
   - [安装](zh-cn/install.md)
   - [准备工作](zh-cn/prepare_work.md)

@@ -52,9 +52,13 @@
 </head>
 
 <body>
+  <nav>
+    <a href="#/"><span>中文</span></a>
+    <a href="#/en-us/"><span>English</span></a>
+  </nav>
 
   <div id="app"></div>
-  
+
   <!-- edit on github-->
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
 
@@ -68,8 +72,8 @@
 
       plugins: [
         EditOnGithubPlugin.create(
-          'https://github.com/github0null/eide-manual/tree/master/', null, 
-          function(file) {
+          'https://github.com/github0null/eide-manual/tree/master/', null,
+          function (file) {
             if (file.indexOf('zh-cn/') != -1) {
               return '在 Github 上编辑'
             } else {
@@ -110,7 +114,7 @@
 
   <!-- goto talk -->
   <div>
-    <a href="https://discuss.em-ide.com/t/embedded-ide" class="go-talk-btn" target="_blank">论坛</a>
+    <a href="https://discuss.em-ide.com/t/embedded-ide" class="go-talk-btn" target="_blank">Forum</a>
   </div>
 </body>
 
