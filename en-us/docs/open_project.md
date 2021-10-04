@@ -1,13 +1,15 @@
-# 打开项目
+# Open Project
 
-> 提供两种打开项目的方式，分别为 `双击工作区文件` 和 `点击操作栏按钮`
+> There are two ways to open the project: `double click workspace file` or `click operations bar button`
 
-## 双击 VsCode 工作区文件 打开
+## Double-click on the VsCode workspace file to open
 
-> 双击 .code-workspace 文件，vscode 会打开该工作区，eide 就能加载工作区内的项目
+> Double-click the .code-workspace file and vscode will open the workspace and eide will be able to load projects in the workspace.
 
-!> 注意：直接用 VsCode 打开项目根目录是无法打开项目的，因为 eide 只会在工作区内搜索和加载项目
+![open project](../img/open_prj_by_ws_file.png)
 
-## 在操作栏点击 “打开项目”
+!> Note: opening the project root directory directly with VsCode will not open the project, because eide will only search and load the project in the workspace.
+
+## Click "Open Project" in the operations bar
 
 ![open project](../img/open_prj.png)

@@ -9,11 +9,9 @@
   - [Prepare Works](en-us/docs/prepare_work.md)
   - [Import Project](en-us/docs/import_project.md)
   - [New Project](en-us/docs/create_project.md)
-  
-  - [Open Project](en-us/docs/comming_soon.md)
-  - [Builder Config](en-us/docs/comming_soon.md)
-  - [**Project Dependences**](en-us/docs/comming_soon.md)
-  - [Build Project](en-us/docs/comming_soon.md)
+  - [Open Project](en-us/docs/open_project.md)
+  - [Builder Config](en-us/docs/builder_config.md)
+  - [**Project Dependences**](en-us/docs/project_deps.md)
   - [Flash Project](en-us/docs/comming_soon.md)
   - [Debug Project](en-us/docs/comming_soon.md)
 - **Project Management**

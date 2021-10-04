@@ -1,144 +1,146 @@
-# 构建配置介绍
+# Builder Configurations
 
 ## Builder Options
 
-> 自 v2.4.0 版本起，eide 使用 Web 页面进行编译器参数的配置
+> Since v2.4.0, eide uses web pages to configure compiler parameters
 
-点击 **构建配置** -> **编译器选项** 的修改按钮即可打开参数配置页面
+Click the **Builder Configuration** -> **Builder Options** modify button to open the parameter configuration page
 
 ![](./../img/prj_builder_options.png)
 
 ***
 
-### 8051/STM8 工程
+### 8051/STM8 Project
 
-- **编译器选项**：关于编译器的相关参数和选项
+- **Builder Options**: Parameters and options about the compiler
 
 ***
 
-### AC5/AC6 (ARMCC) 工程
+### AC5/AC6 (ARMCC) Project
 
 ![](../img/build_conf.png)
 
-- **CPU 类型**：Cortex 系列名
+- **CPU Type**: Cortex series name
   
-- **硬件浮点选项**：CPU 的硬件浮点开关
+- **Hardware floating point option**: CPU hardware floating point switch
   
-- **使用链接脚本**：是否要使用自定义的链接脚本
+- **Use Custom Linker Script File**: Whether to use a custom linker script
   
-  - `打开`此项，会出现一个**链接脚本路径**选项，你需要指定一个链接脚本路径
+  - If `True`, A **linker script path** option will be showed and you need to specify a link script path.
   
     ![](../img/build_use_custom_lds.png)
 
-  - `关闭`此项，会出现一个**RAM/FLASH布局**选项，你需要打开它为芯片设置储存器的地址大小信息
+  - If `False`, A **RAM/FLASH layout** option will be showed, which you need to turn on to set the memory address size information for the chip.
   
     ![](../img/build_nouse_custom_lds.png)
 
     ![](../img/armcc_ram_rom_layout.png)
 
-- **编译器选项**：关于编译器的相关参数和选项
+- **Builder Options**: Parameters and options about the compiler
 
 ***
 
-#### ARM-GCC 工程
+#### ARM-GCC Project
 
 ![](../img/build_conf_gcc.png)
 
-- **CPU 类型**：Cortex 系列名
+- **CPU Type**: Cortex series name
+  
+- **Hardware floating point option**: CPU hardware floating point switch
+  
+- **Linker script file path**: gcc linker script file path
 
-- **链接脚本路径**：GCC 的链接脚本路径
-
-- **编译器选项**：关于编译器的相关参数和选项
+- **Builder Options**: Parameters and options about the compiler
 
 ***
 
-### RISC-V 工程
+### RISC-V Project
 
 ![](../img/build_conf_riscv.png)
 
-- **链接脚本路径**：RISCV GCC 的链接脚本路径
+- **Linker script file path**: risc-v gcc linker script file path
 
-- **编译器选项**：关于编译器的相关参数和选项
+- **Builder Options**: parameters and options about the compiler
 
-RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况设置, 如下
+RISC-V CPU options are located in the **Builder Options**->**Global** and must be set for every project, as follows
 
 ![](../img/riscv_builder_options.png)
 
-- `arch` **字段**: 
+- `arch` **Field**: 
   
-  含义：对应 `-march=` 选项，用于指定 **目标处理器的指令集**
+  description: Corresponds to the `-march=` option, which specifies **the instruction set of target processor**.
 
-  默认值：`rv32imac`
+  default: `rv32imac`
 
-- `abi` **字段**:
+- `abi` **Field**:
   
-  含义：对应 `-mabi=` 选项，用于指定 **整数和浮点调用约定 (integer and floating-point calling convention)**
+  description: Corresponds to the `-mabi=` option, used to specify **integer and floating-point calling convention**.
 
-  默认值：`ilp32`
+  default: `ilp32`
 
-- `code-model` **字段**:
+- `code-model` **Field**:
   
-  含义：对应 `-mcmodel=` 选项，用于指定 **代码模型 (code model)**
+  description: Corresponds to the `-mcmodel=` option, used to specify **code model**.
 
-  默认值：`medlow`
+  default: `medlow`
 
 ***
 
-## 用户命令
+## User Commands
 
-> eide 支持在 **编译前** 和 **编译完成后** 附加一些自定义的用户命令，方便进行其他操作
+> eide support add some custom user commands before compiling and after compiling to run other operations.
 
-打开 **编译器选项**->**User Task** 其中：
+Open **Builder Options**->**User Task**:
 
-  - `Prebuild Task` 代表**构建开始前**要执行的操作
+  - `Prebuild Task`: Run tasks before build start.
 
-  - `Post-build Task` 代表**构建结束后**要执行的操作
+  - `Post-build Task`: Run tasks after build done.
 
 ![](./../img/builder_user_task.png)
 
-### 命令变量
+### Command Variables
 
-命令中可用的 **变量**, 变量名**不区分**大小写：
+There are some available **Variables** can be used in command, variable name **is case insensitive**:
 
-|变量名|含义|
+|variable|description|
 |:----|:----|
-|`${targetName}`|项目名称| 
-|`${ProjectRoot}`|项目根目录|
-|`${OutDir}`|编译输出目录|
-|`${BuilderFolder}`|eide 内置构建工具所在目录|
-|`${ToolchainRoot}`|编译器根目录|
-|`${CompilerPrefix}`|GCC 编译器前缀, 例如: arm-none-eabi-|
-|`${CompilerFolder}`|编译器可执行文件所在目录|
+|`${targetName}`|Project Name| 
+|`${ProjectRoot}`|Project Root Folder|
+|`${OutDir}`|Build output folder|
+|`${BuilderFolder}`|eide builder executable file folder|
+|`${ToolchainRoot}`|Compiler Root Folder|
+|`${CompilerPrefix}`|GCC Compiler Prefix, like: arm-none-eabi-|
+|`${CompilerFolder}`|Compiler executable file folder|
 
 
-示例，加入以下命令到 Post-build Task：`cd "${OutDir}" && del *._*`，含义：在编译结束后删除输出目录下所有匹配 `*._*` 的文件
+exmaple: add this command to Post-build Task: `cd "${OutDir}" && del *.o`, Delete all files in the output directory that match `*.o` after compiling
 
 ![](./../img/add_builder_task.png)
 
 ***
 
-### 常用命令
+### Utility Commands
 
-> **这里有一些常用的命令可供参考**
+> **There are some utility commands, sometimes it can be useful.**
 
 ```ini
 
-# 查看内部的环境变量
+# show internal environment variables
 powershell -Command ls env:
 
-# 打印 GCC 版本
+# print GCC version
 "${CompilerFolder}/${toolPrefix}gcc" -v
 
-# ARMCC 生成 S19 格式的烧录文件
+# generate S19 format file for Armcc
 "${CompilerFolder}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
 
-# 从 hex 文件生成 bin 文件
+# generate bin file from hex file
 "${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
 
-# 复制生成的 .hex .bin 文件到 dist 目录
+# copy the generated .hex .bin file to the dist directory
 mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
 
-# 复制生成的 .a 文件到 dist 目录
+# copy the generated .a file to the dist directory
 mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 ```
