@@ -12,8 +12,8 @@
   - [Open Project](en-us/docs/open_project.md)
   - [Builder Config](en-us/docs/builder_config.md)
   - [**Project Dependences**](en-us/docs/project_deps.md)
-  - [Flash Project](en-us/docs/comming_soon.md)
-  - [Debug Project](en-us/docs/comming_soon.md)
+  - [Flash Project](en-us/docs/download_to_device.md)
+  - [Debug Project](en-us/docs/debug_project.md)
 - **Project Management**
   - [Resource Manager](en-us/docs/comming_soon.md)
   - [Chip Support Package](en-us/docs/comming_soon.md)
