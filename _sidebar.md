@@ -27,6 +27,7 @@
   - [调整代码风格](zh-cn/code_format.md)
   - [SDCC的使用](zh-cn/sdcc.md)
 - **其他功能**
+  - [**CMSIS配置向导**](zh-cn/cmsis_wizard.md)
   - [项目静态检查](zh-cn/cppcheck.md)
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **相关链接**

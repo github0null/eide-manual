@@ -260,6 +260,8 @@ eide 支持主流的 4 种烧录工具
 
  **解压 usblib 后，将 libusb.dll 复制到 python.exe 所在的目录，注意：所选择的 libusb.dll 必须要和电脑上安装的 python 是同一体系结构，例如：python3_x86 版本对应 MS32 目录下的 dll**
 
+ > 提示：当 libusb 在 python 根目录无法被 pyocd 识别时，可以尝试将 libusb.dll 放在 C:\Windows\System32 下
+
  ![](https://img-blog.csdnimg.cn/20200707213346603.png)
 
 3. 连接 目标板，命令行输入 `pyocd list` 检查 pyocd 是否能够正常工作，如果没有问题则会输出已连接的设备列表
