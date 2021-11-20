@@ -38,4 +38,3 @@
   - [常见问题](https://discuss.em-ide.com/t/FAQ)
 - **问题反馈**
   - [反馈渠道](zh-cn/issue_report.md)
-  - [请我喝咖啡☕](zh-cn/coffee.md)
