@@ -106,6 +106,8 @@ eide 支持**为单个的文件或文件夹增加任意编译选项**，使用 g
 
   目前支持：`Segger Embedded Studio`, `IAR For ARM`, `IAR For STM8` 的项目资源导入，后续会增加更多
 
+  > 提示：新增的 js 脚本会随着 [eide_binaries](https://github.com/github0null/eide-resource/tree/master/binaries) 一起更新，因此当发现仓库中新增了脚本之后，使用 `ctrl+shift+p` 打开命令面板，输入 `重新安装 eide_binaries` 即可下载到最新的 js 脚本
+
   ![](../img/import_source/sel_importer.png)
 
 4. 本处选择 `Segger Embedded Studio`，接着会弹出文件选择框，此时选择一个 `Segger Embedded Studio` 项目文件，即可开始导入
