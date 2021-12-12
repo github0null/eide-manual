@@ -22,6 +22,34 @@ eide 支持多种烧录工具，但这些工具并不集成到 eide 安装包内
 
 ***
 
+## 程序文件路径
+
+自 v2.15.0 起，**烧录配置->程序文件路径** 支持指定多个文件，用来一次烧录多个程序文件
+
+程序文件路径填写格式：`<filePath>[,addr][;<filePath>...]`
+
+> 提示：若烧录器不支持一次烧录多个文件，则默认烧录**第一个**文件
+
+### 示例
+
+- `./bootloader.hex;$(ExecutableName).hex`：按顺序烧录 './bootloader.hex' 和 '$(ExecutableName).hex'
+  
+- `./bootloader.bin,0x08000000;$(ExecutableName).hex`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '$(ExecutableName).hex'
+  
+- `./bootloader.bin,0x08000000;$(ExecutableName).bin,0x08100000`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '$(ExecutableName).bin' 至地址 '0x08100000'
+
+***
+
+## 全片擦除
+
+自 v2.15.0 起，增加了一条 vscode 命令 "`Erase Chip`"，用于全片擦除芯片；
+
+按下快捷键 `ctrl+shift` 打开命令面板，输入 `Erase Chip` 回车即可执行
+
+![](../img/erase_chip.png)
+
+***
+
 ## C51 工程
 
 ### 使用 stcgal 烧录
@@ -344,6 +372,12 @@ eide 支持主流的 4 种烧录工具
 - `${programFile}`：代指程序文件（`.hex, .bin, .s19`）路径
 
 - `${port}`：代指 `可用的串口`（**注意：如果有多个串口可用，该值是串口列表的第一个**）
+
+当存在多个可烧录的程序文件时，则以下变量可用：
+
+- `${programFile[n]}`：第 `n` 个程序文件的路径（n 从零开始）
+
+- `${binAddr[n]}`：第 `n` 个程序文件的烧录地址（n 从零开始）
 
 ### 示例
 

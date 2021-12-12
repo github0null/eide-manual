@@ -22,6 +22,7 @@
   - [多目标项目](zh-cn/project_targets.md)
   - [多项目工作区](zh-cn/multi_prj_workspace.md)
   - [导出项目](zh-cn/export_project.md)
+  - [环境变量](zh-cn/project_env.md)
   - [实用功能](zh-cn/utility_functions.md)
 - **代码编写**
   - [调整代码风格](zh-cn/code_format.md)
