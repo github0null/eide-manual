@@ -32,6 +32,7 @@
   - [项目静态检查](zh-cn/cppcheck.md)
   - [串口监视器](zh-cn/serialport_monitor.md)
 - **相关链接**
+  - [eide博客](https://discuss.em-ide.com/blog)
   - [SDCC手册](http://sdcc.sourceforge.net/doc/sdccman.pdf)
   - [GCC链接脚本](https://sourceware.org/binutils/docs/ld/index.html#SEC_Contents)
   - [Makefile教程](https://em-ide.com/docs/how-to-write-makefile/html/)
