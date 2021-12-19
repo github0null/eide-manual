@@ -82,14 +82,21 @@
 - 向环境变量配置文件中，添加如下内容：
 
   ```ini
+  # obsoleted at v2.15.3^
   [workspace]
   # workspace build order
   order = 0
   ```
 
+  !> 注意：v2.15.3 以后，**构建优先级** 使用字段 `EIDE_BUILD_ORDER` 代替（**上述的配置将失效**），应使用如下配置：
+
+  ```ini
+  # workspace build order
+  EIDE_BUILD_ORDER = 0
+  ```
+
   其中 order 的值即为项目的优先级（不设置默认为 100），**其值越小，优先级越高**
 
 - 修改之后保存配置文件，点击 `构建所有项目`，即可按照指定顺序完成构建
-
 
 > 本例使用的示例工程：[threadx_stm32f7xx_demo](https://github.com/github0null/eide-resource/blob/master/eide-template-list/threadx_stm32f7xx_demo.ewt)
