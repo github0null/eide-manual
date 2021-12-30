@@ -30,23 +30,23 @@ eide 支持多种烧录工具，但这些工具并不集成到 eide 安装包内
 
 > 提示：若烧录器不支持一次烧录多个文件，则默认烧录**第一个**文件
 >
-> 若 **烧录配置->程序文件路径** 为空，则使用 `$(ExecutableName).hex` 作为默认值
+> 若 **烧录配置->程序文件路径** 为空，则使用 `${ExecutableName}.hex` 作为默认值
 
 程序文件路径中支持的变量如下：
 
-- `$(OutDir)`： 输出目录
-- `$(ProjectName)`： 项目名
-- `$(ExecutableName)`： 输出的可执行文件路径，不含后缀
-- `$(ProjectRoot)`： 项目根目录
-- `$(环境变量)`：**项目设置->环境变量** 中的变量
+- `${OutDir}`： 输出目录
+- `${ProjectName}`： 项目名
+- `${ExecutableName}`： 输出的可执行文件路径，不含后缀
+- `${ProjectRoot}`： 项目根目录
+- `${环境变量}`：**项目设置->环境变量** 中的变量
 
 ### 示例
 
-- `./bootloader.hex;$(ExecutableName).hex`：按顺序烧录 './bootloader.hex' 和 '$(ExecutableName).hex'
+- `./bootloader.hex;${ExecutableName}.hex`：按顺序烧录 './bootloader.hex' 和 '${ExecutableName}.hex'
   
-- `./bootloader.bin,0x08000000;$(ExecutableName).hex`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '$(ExecutableName).hex'
+- `./bootloader.bin,0x08000000;${ExecutableName}.hex`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '${ExecutableName}.hex'
   
-- `./bootloader.bin,0x08000000;$(ExecutableName).bin,0x08100000`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '$(ExecutableName).bin' 至地址 '0x08100000'
+- `./bootloader.bin,0x08000000;${ExecutableName}.bin,0x08100000`：先烧录 './bootloader.bin' 至地址 '0x08000000'，再烧录 '${ExecutableName}.bin' 至地址 '0x08100000'
 
 ***
 
