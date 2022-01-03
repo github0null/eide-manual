@@ -4,7 +4,7 @@
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
   - [**论坛社区**](https://discuss.em-ide.com)
   - [**VSIX快照**](https://cloud.github0null.io/s/1oCE)
-- **开始使用**
+- **入门**
   - [安装](zh-cn/install.md)
   - [准备工作](zh-cn/prepare_work.md)
   - [导入项目](zh-cn/import_project.md)
@@ -15,7 +15,8 @@
   - [编译项目](zh-cn/build_project.md)
   - [烧录程序](zh-cn/download_to_device.md)
   - [调试程序](zh-cn/debug_project.md)
-- **项目管理**
+  - [设置快捷键](zh-cn/shortcuts.md)
+- **进阶**
   - [**资源管理器**](zh-cn/project_manager.md)
   - [芯片支持包](zh-cn/chip_support_pack.md)
   - [编译工具介绍](zh-cn/toolchain_support.md)
@@ -24,13 +25,12 @@
   - [导出项目](zh-cn/export_project.md)
   - [环境变量](zh-cn/project_env.md)
   - [实用功能](zh-cn/utility_functions.md)
-- **代码编写**
-  - [调整代码风格](zh-cn/code_format.md)
-  - [SDCC的使用](zh-cn/sdcc.md)
-- **其他功能**
   - [**CMSIS配置向导**](zh-cn/cmsis_wizard.md)
   - [项目静态检查](zh-cn/cppcheck.md)
   - [串口监视器](zh-cn/serialport_monitor.md)
+- **代码编写**
+  - [调整代码风格](zh-cn/code_format.md)
+  - [SDCC的使用](zh-cn/sdcc.md)
 - **相关链接**
   - [eide博客](https://discuss.em-ide.com/blog)
   - [SDCC手册](http://sdcc.sourceforge.net/doc/sdccman.pdf)
