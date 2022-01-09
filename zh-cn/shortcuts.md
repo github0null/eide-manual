@@ -43,6 +43,12 @@ vscode 的 `Task Build` 操作默认快捷键为：`ctrl+shift+B`，如果要将
             "problemMatcher": []
         },
         {
+            "label": "build and flash",
+            "type": "shell",
+            "command": "${command:eide.project.buildAndFlash}",
+            "group": "build"
+        },
+        {
             "label": "rebuild",
             "type": "shell",
             "command": "${command:eide.project.rebuild}",
