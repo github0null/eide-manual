@@ -122,6 +122,11 @@ RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况
 > **这里有一些常用的命令可供参考**
 
 ```ini
+# 执行 bat 脚本
+.\xxx\xxx\xxx.bat [script arguments...]
+
+# 执行 linux shell 脚本
+bash ./xxx/xxx.sh [script arguments...]
 
 # 查看内部的环境变量
 powershell -Command ls env:
