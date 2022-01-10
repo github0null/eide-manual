@@ -34,7 +34,8 @@
 - **相关链接**
   - [eide博客](https://discuss.em-ide.com/blog)
   - [SDCC手册](http://sdcc.sourceforge.net/doc/sdccman.pdf)
-  - [GCC链接脚本](https://sourceware.org/binutils/docs/ld/index.html#SEC_Contents)
+  - [GCC手册](https://gcc.gnu.org/onlinedocs/gcc-8.3.0/gcc)
+  - [GCC链接脚本手册](https://sourceware.org/binutils/docs/ld/index.html#SEC_Contents)
   - [Makefile教程](https://em-ide.com/docs/how-to-write-makefile/html/)
   - [JLink命令手册](https://wiki.segger.com/J-Link_Commander)
   - [常见问题](https://discuss.em-ide.com/t/FAQ)
