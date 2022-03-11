@@ -32,13 +32,27 @@ eide 支持导入 KEIL C51 和 KEIL MDK 项目，并以虚拟文件夹的形式�
    
    ![](../img/import_mod_conf_2.png) 
 
-   - 打开项目的 **编译器选项**，将 MDK 的 **C/C++, asm, linker 选项卡**里的配置设置到相应字段中，设置完毕后保存即可
+   - 打开项目的 **编译器选项**，先把 Keil 对话框里这些勾选框，在 **eide 的 C/C++ 页面** 里勾上，没有的先不管
 
-   ![](../img/prj_builder_options.png)
+     ![](../img/import_prj_keil_opts.png)
 
-6. 修改完毕后，即可点击构建按钮启动构建
+     ![](../img/import_prj_builder_options.png)
 
-!> 导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
+   - 然后将 Keil `Misc-Controls` 框里的内容填到 C/C++ 页面的 `C编译器附加选项` 里
+
+     ![](../img/import_prj_keil_opts_2.png)
+     
+     ![](../img/import_prj_builder_options_2.png)
+
+6. 打开 **项目属性**，检查导入后项目的 `包含路径`，`宏定义` 是否与**原 Keil 项目**一致，**若存在缺失/错误项，请手动将其补全**
+
+   ![](../img/import_prj_check_prj_attrs.png)
+
+7. 修改完毕后，即可点击构建按钮启动构建
+
+   - 若存在编译错误，根据错误信息百度自行排查；无法解决的，可在[论坛](https://discuss.em-ide.com)发帖寻求帮助
+
+!> 注意：导入功能只支持 **KEIL 5** 及以上版本的项目，强行导入 **KEIL 4** 项目会导致失败
 
 ## 注意事项
 
