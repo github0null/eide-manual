@@ -3,7 +3,7 @@
   - [插件主页](https://marketplace.visualstudio.com/items?itemName=CL.eide)
   - [更新日志](https://marketplace.visualstudio.com/items/CL.eide/changelog)
   - [**论坛社区**](https://discuss.em-ide.com)
-  - [**VSIX快照**](https://cloud.github0null.io/s/1oCE)
+  - [**仓库地址**](https://github.com/github0null/eide)
 - **入门**
   - [安装](zh-cn/install.md)
   - [准备工作](zh-cn/prepare_work.md)
