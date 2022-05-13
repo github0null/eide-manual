@@ -3,7 +3,6 @@
   - [Home Page](https://marketplace.visualstudio.com/items?itemName=CL.eide)
   - [Change Log](https://marketplace.visualstudio.com/items/CL.eide/changelog)
   - [**Forum**](https://discuss.em-ide.com)
-  - [**VSIX Snapshot**](https://cloud.github0null.io/s/1oCE)
 - **Getting Started**
   - [Install](en-us/docs/install.md)
   - [Prepare Works](en-us/docs/prepare_work.md)
