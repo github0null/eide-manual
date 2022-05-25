@@ -183,10 +183,22 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 例如：
 
-```
+```shell
 # 输出 hex 文件的 crc 校验值
 crc32 "${OutDir}/${TargetName}.hex"
 
 # 输出 hex 文件的 sha1 校验值
 sha1sum "${OutDir}/${TargetName}.hex"
+```
+
+所有可用的命令：
+
+```shell
+awk basename bash bunzip2 bzip2 
+bzip2recover cat chmod cksum cp 
+crc32 curl date dd dirname dos2unix 
+echo expr find gawk-3.1.7 gawk grep 
+gzip head kill ln ls make-old make makeinfo 
+md5sum mkdir mv openssl pwd rm rmdir sed sh 
+sha1sum sleep tar test touch tr unzip wget xargs zip
 ```
