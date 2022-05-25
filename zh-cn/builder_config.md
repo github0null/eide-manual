@@ -177,7 +177,7 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 ### 内置的实用程序
 
-**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\<USER_NAME>\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
+**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\\<USER_NAME>\\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
 
 通过在构建前/后任务的命令行中合理使用这些程序，可以进行更多的自定义处理和操作；
 
@@ -194,11 +194,10 @@ sha1sum "${OutDir}/${TargetName}.hex"
 所有可用的命令：
 
 ```shell
-awk basename bash bunzip2 bzip2 
-bzip2recover cat chmod cksum cp 
-crc32 curl date dd dirname dos2unix 
-echo expr find gawk-3.1.7 gawk grep 
-gzip head kill ln ls make-old make makeinfo 
-md5sum mkdir mv openssl pwd rm rmdir sed sh 
-sha1sum sleep tar test touch tr unzip wget xargs zip
+awk basename bash bunzip2 bzip2 bzip2recover 
+cat chmod cksum cp crc32 curl date dd dirname dos2unix 
+echo expr find gawk-3.1.7 gawk grep gzip head 
+kill ln ls make-old make makeinfo md5sum mkdir mv 
+openssl pwd rm rmdir sed sh sha1sum sleep tar test 
+touch tr unzip wget xargs zip
 ```
