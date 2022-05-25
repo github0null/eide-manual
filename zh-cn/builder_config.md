@@ -156,16 +156,16 @@ powershell -Command ls env:
 "${CompilerFolder}/${toolPrefix}gcc" -v
 
 # ARMCC 生成 S19 格式的烧录文件
-"${CompilerFolder}\fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
+"${CompilerFolder}/fromelf" --m32combined -o "${OutDir}\${targetName}.s19" "${OutDir}\${targetName}.axf"
 
 # GCC 生成 hex 文件
-"${CompilerFolder}\${CompilerPrefix}objcopy" -O ihex "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.hex"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O ihex "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.hex"
 
 # GCC 生成 bin 文件
-"${CompilerFolder}\${CompilerPrefix}objcopy" -O binary "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.bin"
+"${CompilerFolder}/${CompilerPrefix}objcopy" -O binary "${OutDir}\${TargetName}.elf" "${OutDir}\${TargetName}.bin"
 
 # 使用 hex2bin 从 hex 文件生成 bin 文件
-"${BuilderFolder}\hex2bin.exe" -b -c "${outDir}\${targetName}.hex"
+"${BuilderFolder}/utils/hex2bin" -b -c "${outDir}/${targetName}.hex"
 
 # 复制生成的 .hex .bin 文件到 dist 目录
 mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir}\${targetName}.bin" .\dist\
