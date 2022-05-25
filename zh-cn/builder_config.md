@@ -107,7 +107,7 @@ RISC-V 的 CPU 选项位于 **编译器选项**->**Global**，需要根据情况
 
 ## 用户命令
 
-> eide 支持在 **编译开始前** 和 **编译完成后** 附加一些自定义的用户命令（**命令使用 cmd 执行**），方便进行其他操作
+> eide 支持在 **编译开始前** 和 **编译完成后** 附加一些自定义的用户命令（**命令使用系统 shell 执行, win32 为 cmd.exe, linux 为 /bin/bash**），方便进行其他操作
 
 打开 **编译器选项**->**User Task** 其中：
 
@@ -173,4 +173,20 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.hex" .\dist\ & copy /B "${OutDir
 # 复制生成的 .a 文件到 dist 目录
 mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
+```
+
+### 内置的实用程序
+
+**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\<USER_NAME>\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
+
+通过在构建前/后任务的命令行中合理使用这些程序，可以进行更多的自定义处理和操作；
+
+例如：
+
+```
+# 输出 hex 文件的 crc 校验值
+crc32 "${OutDir}/${TargetName}.hex"
+
+# 输出 hex 文件的 sha1 校验值
+sha1sum "${OutDir}/${TargetName}.hex"
 ```
