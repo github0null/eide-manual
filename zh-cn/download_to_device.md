@@ -266,13 +266,11 @@ eide 支持主流的 4 种烧录工具
 
 ### 使用 STLink 烧录
 
-> 对于 STLink, 本软件使用 `STLink Utility` 作为烧录工具
+> 对于 STLink 烧录器, 本软件使用 `STLink Utility` 或者 `STM32CubeProgramer` 作为烧录软件
 > 
 > STLink Utility 官方下载地址：https://www.st.com/zh/development-tools/stsw-link004.html
 >
-> 共享下载地址：https://cloud.github0null.io/s/R4SY?path=%2F%E7%83%A7%E5%BD%95%E5%B7%A5%E5%85%B7
-
-> V2.12.3 及以后版本，兼容使用 `STM32CubeProgramer` 工具进行烧录
+> STM32CubeProgramer 官方下载地址：https://www.st.com/en/development-tools/stm32cubeprog.html
 
 安装完之后，打开 vscode 设置，在搜索栏输入：`EIDE.STLink.ExePath`
 
@@ -285,6 +283,8 @@ eide 支持主流的 4 种烧录工具
 配置完毕之后，即可点击 “下载程序” 按钮进行烧录
 
 ![](../img/stlink_flasher_conf.png)
+
+!> 注意：如果使用 `STLink Utility`，请确保 ST-LINK CLI 版本至少为 `v3.6.0.0`，（在 cmd 中执行 ST-LINK_CLI.exe 即可查看版本号）
 
 ### 使用 pyocd 烧录
 
