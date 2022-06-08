@@ -177,7 +177,7 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 ### 内置的实用程序
 
-**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\USER_NAME\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
+**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\USER_NAME\\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
 
 通过在构建前/后任务的命令行中合理使用这些程序，可以进行更多的自定义处理和操作；
 
