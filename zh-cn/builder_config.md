@@ -6,10 +6,10 @@
 
 |变量名|含义|备注|
 |:----|:----|:----|
-|`${OutName}`|`.o` 文件的输出名称|绝对路径，不含后缀| 
-|`${OutDir}`|`.o` 文件的输出目录|绝对路径| 
-|`${FileName}`|源文件的名称|绝对路径，不含后缀| 
-|`${FileDir}`|源文件的目录位置|绝对路径|
+|`${OutName}`|`.o` 文件的输出名称|相对路径，不含后缀| 
+|`${OutDir}`|`.o` 文件的输出目录|相对路径| 
+|`${FileName}`|源文件的名称|相对路径，不含后缀| 
+|`${FileDir}`|源文件的目录位置|相对路径|
 
 使用示例：
 
@@ -177,7 +177,7 @@ mkdir .\dist & copy /B "${OutDir}\${targetName}.a" .\dist\lib${targetName}.a
 
 ### 内置的实用程序
 
-**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\\<USER_NAME>\\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
+**对于 Win32**，插件内部自带了一个 MSYS 环境（位置：C:\Users\USER_NAME\.eide\bin\builder\msys\bin），包含一些实用的命令行程序
 
 通过在构建前/后任务的命令行中合理使用这些程序，可以进行更多的自定义处理和操作；
 
